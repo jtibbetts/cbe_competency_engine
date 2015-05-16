@@ -1,0 +1,5 @@
+  [1m[36mLti2Tc::Registry Load (0.1ms)[0m  [1mSELECT "lti2_tc_registries".* FROM "lti2_tc_registries"[0m
+SQLite3::SQLException: near "TRUNCATE": syntax error: TRUNCATE "admin_users"
+SQLite3::SQLException: near "TRUNCATE": syntax error: TRUNCATE "courses"
+SQLite3::SQLException: near "TRUNCATE": syntax error: TRUNCATE "enrollments"
+SQLite3::SQLException: near "TRUNCATE": syntax error: TRUNCATE "lti2_tc_registries"

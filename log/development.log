@@ -1,0 +1,36 @@
+  [1m[36mLti2Tc::Registry Load (0.3ms)[0m  [1mSELECT `lti2_tc_registries`.* FROM `lti2_tc_registries`[0m
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mLti2Tc::Registry Load (0.5ms)[0m  [1mSELECT `lti2_tc_registries`.* FROM `lti2_tc_registries`[0m
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+  [1m[36mLti2Tc::Registry Load (0.4ms)[0m  [1mSELECT `lti2_tc_registries`.* FROM `lti2_tc_registries`[0m
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mSQL (17.7ms)[0m  [1mDELETE FROM `lti2_tc_deployment_requests`[0m
+  [1m[35mSQL (20.9ms)[0m  DELETE FROM `lti2_tc_tool_consumer_profiles`
+  [1m[36mSQL (4.4ms)[0m  [1mDELETE FROM `lti2_tc_resources`[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM `lti2_tc_tools`
+  [1m[36mSQL (0.8ms)[0m  [1mDELETE FROM `lti2_tc_links`[0m
+  [1m[35mSQL (0.9ms)[0m  DELETE FROM `grade_items`
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM `grade_results`[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM `lti2_tc_tool_settings`
+  [1m[36mLti2Tc::Registry Load (0.3ms)[0m  [1mSELECT `lti2_tc_registries`.* FROM `lti2_tc_registries`[0m
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mSQL (12.1ms)[0m  [1mDELETE FROM `lti2_tc_deployment_requests`[0m
+  [1m[35mSQL (9.2ms)[0m  DELETE FROM `lti2_tc_tool_consumer_profiles`
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM `lti2_tc_resources`[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM `lti2_tc_tools`
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM `lti2_tc_links`[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM `grade_items`
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM `grade_results`[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM `lti2_tc_tool_settings`

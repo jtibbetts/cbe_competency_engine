@@ -1,0 +1,27 @@
+
+:javascript
+  function do_click(id) {
+    checkedState = $(id).prop('checked');
+    $(id).parent('div').children('.checkbox:checked').each(function () {
+      $(this).prop('checked', false);
+    });
+    $(id).prop('checked', true);
+    return false;
+  };
+
+
+- @name_hash = request.params['name_hash']
+
+:textile
+
+  h3. LuMoS -- Push Record of Performance
+
+%form{:method => 'post', :action => "/push_record_of_performance_service"}
+  %div
+    - @name_hash.each do |key,value|
+      %br
+      %input{:type=>"checkbox", :class=>"checkbox", :name=>"#{key}", :value=>"#{value}", :checked=>false, :onclick=>"do_click(this)"}
+      =key
+
+  %br
+  %input{:type => :submit, :value => "Save"}

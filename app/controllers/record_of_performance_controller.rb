@@ -1,4 +1,4 @@
-class PushRecordOfPerformanceController < ApplicationController
+class RecordOfPerformanceController < ApplicationController
   def pre_process
     Lti2Tc::Authorizer::pre_process_tenant(request)
   end

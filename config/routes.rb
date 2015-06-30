@@ -5,6 +5,9 @@ Lumos::Application.routes.draw do
   resources :registries
   resources :results
 
+  # cbe resources
+  resources :organizations
+
   get "docs", :to => "docs#show"
 
   get "home/index"

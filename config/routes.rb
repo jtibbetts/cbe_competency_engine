@@ -20,6 +20,6 @@ Lumos::Application.routes.draw do
 
   post '/push_record_of_performance_service', :to => 'push_record_of_performance#post_service'
 
-  devise_for :admin_users, ActiveAdmin::Devise.config
+  # devise_for :admin_users, ActiveAdmin::Devise.config
 
 end

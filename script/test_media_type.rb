@@ -8,3 +8,4 @@ rop_json = Cbe::RecordOfPerformance.record_of_performance_media_type('http://kin
 
 puts rop_json
 
+File.open("../../data/rop_media_type.jsonld", "w") { |file| file.write rop_json }

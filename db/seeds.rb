@@ -92,70 +92,80 @@ mba6012 = Cbe::CourseOffering.create(
 Cbe::CourseSection.create(
     course_offering_id: mba6004.id,
     term_id: termFall2013.id,
-    label: "#{mba6004.label} Section 1",
+    label: "#{mba6004.label.gsub(/ /, '')}-1",
+    title: "#{mba6004.label} Section 1",
     section_number: "1"
 )
 
 Cbe::CourseSection.create(
     course_offering_id: mba6004.id,
     term_id: termFall2013.id,
-    label: "#{mba6004.label} Section 2",
+    label: "#{mba6004.label.gsub(/ /, '')}-2",
+    title: "#{mba6004.label} Section 2",
     section_number: "2"
 )
 
 Cbe::CourseSection.create(
     course_offering_id: mba6006.id,
     term_id: termFall2013.id,
-    label: "#{mba6006.label} Section 1",
+    label: "#{mba6006.label.gsub(/ /, '')}-1",
+    title: "#{mba6006.label} Section 1",
     section_number: "1"
 )
 
 Cbe::CourseSection.create(
     course_offering_id: mba6008.id,
     term_id: termFall2013.id,
-    label: "#{mba6008.label} Section 1",
+    label: "#{mba6008.label.gsub(/ /, '')}-1",
+    title: "#{mba6008.label} Section 1",
     section_number: "1"
 )
 
 Cbe::CourseSection.create(
     course_offering_id: mba6012.id,
     term_id: termFall2013.id,
-    label: "#{mba6012.label} Section 1",
+    label: "#{mba6012.label.gsub(/ /, '')}-1",
+    title: "#{mba6012.label} Section 1",
     section_number: "1"
 )
 
 Cbe::CourseSection.create(
     course_offering_id: mba6004.id,
     term_id: termWinter2014.id,
-    label: "#{mba6004.label} Section 1",
+    label: "#{mba6004.label.gsub(/ /, '')}-1",
+    title: "#{mba6004.label} Section 1",
     section_number: "1"
 )
 
 Cbe::CourseSection.create(
     course_offering_id: mba6004.id,
     term_id: termWinter2014.id,
-    label: "#{mba6004.label} Section 2",
+    label: "#{mba6004.label.gsub(/ /, '')}-2",
+    title: "#{mba6004.label} Section 2",
     section_number: "2"
 )
 
 Cbe::CourseSection.create(
     course_offering_id: mba6006.id,
     term_id: termWinter2014.id,
-    label: "#{mba6006.label} Section 1",
+    label: "#{mba6006.label.gsub(/ /, '')}-1",
+    title: "#{mba6006.label} Section 1",
     section_number: "1"
 )
 
 Cbe::CourseSection.create(
     course_offering_id: mba6008.id,
     term_id: termWinter2014.id,
-    label: "#{mba6008.label} Section 1",
+    label: "#{mba6008.label.gsub(/ /, '')}-1",
+    title: "#{mba6008.label} Section 1",
     section_number: "1"
 )
 
 Cbe::CourseSection.create(
     course_offering_id: mba6012.id,
     term_id: termWinter2014.id,
-    label: "#{mba6012.label} Section 1",
+    label: "#{mba6012.label.gsub(/ /, '')}-1",
+    title: "#{mba6012.label} Section 1",
     section_number: "1"
 )
 
@@ -171,74 +181,92 @@ competency_by_course_offering[mba6004] << Cbe::Competency.create(
 )
 
 competency_by_course_offering[mba6004] << Cbe::Competency.create(
+    label: 'mba6004-1',
     statement: 'Integrate the Internet, collaboration, and virtual environment strategies into general business management planning and decision-making.'
 )
 
 competency_by_course_offering[mba6004] << Cbe::Competency.create(
+    label: 'mba6004-2',
     statement: 'Integrate business strategies into general business management planning and decision-making.'
 )
 
 competency_by_course_offering[mba6004] << Cbe::Competency.create(
+    label: 'mba6004-3',
     statement: 'Analyze relevant global business concerns for the future.'
 )
 
 competency_by_course_offering[mba6004] << Cbe::Competency.create(
+    label: 'mba6004-4',
     statement: 'Communicate in a manner that is professional and consistent with expectations for members of the business professions.'
 )
 
 competency_by_course_offering[mba6006] << Cbe::Competency.create(
+    label: 'mba6006-1',
     statement: 'Analyze contemporary leadership models and practices from the perspective of innovation in a global environment.'
 )
 
 competency_by_course_offering[mba6006] << Cbe::Competency.create(
+    label: 'mba6006-2',
     statement: 'Assess the behaviors that drive innovation and how leaders can use those behaviors to create innovative organizations.'
 )
 
 competency_by_course_offering[mba6006] << Cbe::Competency.create(
+    label: 'mba6006-3',
     statement: 'Assess what leaders of innovation do to shape organizational culture and processes.'
 )
 
 competency_by_course_offering[mba6006] << Cbe::Competency.create(
+    label: 'mba6006-4',
     statement: 'Communicate in a manner that is professional and consistent with expectations for members of the business professions.'
 )
 
 competency_by_course_offering[mba6008] << Cbe::Competency.create(
+    label: 'mba6008-1',
     statement: 'Apply the theories, models, and practices of economic theory to create value for the firm.'
 )
 
 competency_by_course_offering[mba6008] << Cbe::Competency.create(
+    label: 'mba6008-2',
     statement: 'Assess the impact of ethical and regulatory considerations on economic decisions'
 )
 
 competency_by_course_offering[mba6008] << Cbe::Competency.create(
+    label: 'mba6008-3',
     statement: 'Analyze the macroeconomic environment of corporate operations'
 )
 
 competency_by_course_offering[mba6008] << Cbe::Competency.create(
+    label: 'mba6008-4',
     statement: 'Analyze the microeconomic environment of corporate operations'
 )
 
 competency_by_course_offering[mba6008] << Cbe::Competency.create(
+    label: 'mba6008-5',
     statement: 'Communicate in a manner that is professional and consistent with expectations for members of the business professions.ply collaborative techniques to the virtual environment.'
 )
 
 competency_by_course_offering[mba6012] << Cbe::Competency.create(
+    label: 'mba6012-1',
     statement: 'Apply theories, models, and practices of marketing'
 )
 
 competency_by_course_offering[mba6012] << Cbe::Competency.create(
+    label: 'mba6012-2',
     statement: 'Integrate fundamental principles and applications of marketing to address business problems.'
 )
 
 competency_by_course_offering[mba6012] << Cbe::Competency.create(
+    label: 'mba6012-3',
     statement: 'Develop innovative and sustainable solutions to strategic marketing challenges'
 )
 
 competency_by_course_offering[mba6012] << Cbe::Competency.create(
+    label: 'mba6012-4',
     statement: 'Integrate marketing analyses into general business management planning and decision making'
 )
 
 competency_by_course_offering[mba6012] << Cbe::Competency.create(
+    label: 'mba6012-5',
     statement: 'Communicate in a manner that is professional and consistent with expectations for members of the business professions'
 )
 
@@ -312,6 +340,6 @@ Cbe::AchievementLevel.create(
 )
 
 Cbe::AchievementLevel.create(
-    label: 'Failed',
+    label: 'NonProficient',
     start_of_range: 0
 )

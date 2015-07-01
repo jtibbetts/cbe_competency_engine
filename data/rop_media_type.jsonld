@@ -1,0 +1,208 @@
+{
+  "@context": {
+    "RecordOfPerformance": "http://purl.imsglobal.org/ctx/cbe/v1/record_of_performance#RecordOfPerformance"
+  },
+  "@id": "http://kinexis.com/cbe/a8f82790-0245-0133-59fe-20c9d07c6451",
+  "@type": "RecordOfPerformance",
+  "created_at": "2015-07-01T10:36:42-07:00",
+  "content": {
+    "organization": {
+      "organization_id": "http://kinexis.com/cbe/a8f82790-0245-0133-59fe-20c9d07c6451/organization/5",
+      "legal_name": "IMS Learning Institute, LLC",
+      "website": "ili.imsglobal.org"
+    },
+    "user": {
+      "user_id": "http://kinexis.com/cbe/a8f82790-0245-0133-59fe-20c9d07c6451/user/10",
+      "lis_person_name_family": "Arne",
+      "lis_person_name_given": "Tom",
+      "email": "tarne@hotmail.com",
+      "sourced_id": 0
+    },
+    "program": {
+      "program_id": "http://kinexis.com/cbe/a8f82790-0245-0133-59fe-20c9d07c6451/program/5",
+      "label": "Master of Business Admin FP",
+      "degree_level": "MBA",
+      "courses": [
+        {
+          "course_section_id": "http://kinexis.com/cbe/a8f82790-0245-0133-59fe-20c9d07c6451/course_section/41",
+          "label": "MBA-FP6004-1",
+          "title": "MBA-FP 6004 Section 1",
+          "competencies": [
+            {
+              "competency_id": "http://kinexis.com/cbe/a8f82790-0245-0133-59fe-20c9d07c6451/competency/77",
+              "label": "",
+              "statement": "Examine the use of critical, strategic, and ethical thinking in decision-making",
+              "achievement": "Distinguished"
+            },
+            {
+              "competency_id": "http://kinexis.com/cbe/a8f82790-0245-0133-59fe-20c9d07c6451/competency/78",
+              "label": "mba6004-1",
+              "statement": "Integrate the Internet, collaboration, and virtual environment strategies into general business management planning and decision-making.",
+              "achievement": "NonProficient"
+            },
+            {
+              "competency_id": "http://kinexis.com/cbe/a8f82790-0245-0133-59fe-20c9d07c6451/competency/79",
+              "label": "mba6004-2",
+              "statement": "Integrate business strategies into general business management planning and decision-making.",
+              "achievement": "Distinguished"
+            },
+            {
+              "competency_id": "http://kinexis.com/cbe/a8f82790-0245-0133-59fe-20c9d07c6451/competency/80",
+              "label": "mba6004-3",
+              "statement": "Analyze relevant global business concerns for the future.",
+              "achievement": "Proficient"
+            },
+            {
+              "competency_id": "http://kinexis.com/cbe/a8f82790-0245-0133-59fe-20c9d07c6451/competency/81",
+              "label": "mba6004-4",
+              "statement": "Communicate in a manner that is professional and consistent with expectations for members of the business professions.",
+              "achievement": "Proficient"
+            }
+          ]
+        },
+        {
+          "course_section_id": "http://kinexis.com/cbe/a8f82790-0245-0133-59fe-20c9d07c6451/course_section/43",
+          "label": "MBA-FP6006-1",
+          "title": "MBA-FP 6006 Section 1",
+          "competencies": [
+            {
+              "competency_id": "http://kinexis.com/cbe/a8f82790-0245-0133-59fe-20c9d07c6451/competency/82",
+              "label": "mba6006-1",
+              "statement": "Analyze contemporary leadership models and practices from the perspective of innovation in a global environment.",
+              "achievement": "NonProficient"
+            },
+            {
+              "competency_id": "http://kinexis.com/cbe/a8f82790-0245-0133-59fe-20c9d07c6451/competency/83",
+              "label": "mba6006-2",
+              "statement": "Assess the behaviors that drive innovation and how leaders can use those behaviors to create innovative organizations.",
+              "achievement": "Basic"
+            },
+            {
+              "competency_id": "http://kinexis.com/cbe/a8f82790-0245-0133-59fe-20c9d07c6451/competency/84",
+              "label": "mba6006-3",
+              "statement": "Assess what leaders of innovation do to shape organizational culture and processes.",
+              "achievement": "Basic"
+            },
+            {
+              "competency_id": "http://kinexis.com/cbe/a8f82790-0245-0133-59fe-20c9d07c6451/competency/85",
+              "label": "mba6006-4",
+              "statement": "Communicate in a manner that is professional and consistent with expectations for members of the business professions.",
+              "achievement": "Proficient"
+            }
+          ]
+        },
+        {
+          "course_section_id": "http://kinexis.com/cbe/a8f82790-0245-0133-59fe-20c9d07c6451/course_section/44",
+          "label": "MBA-FP6008-1",
+          "title": "MBA-FP 6008 Section 1",
+          "competencies": [
+            {
+              "competency_id": "http://kinexis.com/cbe/a8f82790-0245-0133-59fe-20c9d07c6451/competency/86",
+              "label": "mba6008-1",
+              "statement": "Apply the theories, models, and practices of economic theory to create value for the firm.",
+              "achievement": "NonProficient"
+            },
+            {
+              "competency_id": "http://kinexis.com/cbe/a8f82790-0245-0133-59fe-20c9d07c6451/competency/87",
+              "label": "mba6008-2",
+              "statement": "Assess the impact of ethical and regulatory considerations on economic decisions",
+              "achievement": "Distinguished"
+            },
+            {
+              "competency_id": "http://kinexis.com/cbe/a8f82790-0245-0133-59fe-20c9d07c6451/competency/88",
+              "label": "mba6008-3",
+              "statement": "Analyze the macroeconomic environment of corporate operations",
+              "achievement": "Proficient"
+            },
+            {
+              "competency_id": "http://kinexis.com/cbe/a8f82790-0245-0133-59fe-20c9d07c6451/competency/89",
+              "label": "mba6008-4",
+              "statement": "Analyze the microeconomic environment of corporate operations",
+              "achievement": "NonProficient"
+            },
+            {
+              "competency_id": "http://kinexis.com/cbe/a8f82790-0245-0133-59fe-20c9d07c6451/competency/90",
+              "label": "mba6008-5",
+              "statement": "Communicate in a manner that is professional and consistent with expectations for members of the business professions.ply collaborative techniques to the virtual environment.",
+              "achievement": "Basic"
+            }
+          ]
+        },
+        {
+          "course_section_id": "http://kinexis.com/cbe/a8f82790-0245-0133-59fe-20c9d07c6451/course_section/49",
+          "label": "MBA-FP6008-1",
+          "title": "MBA-FP 6008 Section 1",
+          "competencies": [
+            {
+              "competency_id": "http://kinexis.com/cbe/a8f82790-0245-0133-59fe-20c9d07c6451/competency/86",
+              "label": "mba6008-1",
+              "statement": "Apply the theories, models, and practices of economic theory to create value for the firm.",
+              "achievement": "Distinguished"
+            },
+            {
+              "competency_id": "http://kinexis.com/cbe/a8f82790-0245-0133-59fe-20c9d07c6451/competency/87",
+              "label": "mba6008-2",
+              "statement": "Assess the impact of ethical and regulatory considerations on economic decisions",
+              "achievement": "NonProficient"
+            },
+            {
+              "competency_id": "http://kinexis.com/cbe/a8f82790-0245-0133-59fe-20c9d07c6451/competency/88",
+              "label": "mba6008-3",
+              "statement": "Analyze the macroeconomic environment of corporate operations",
+              "achievement": "NonProficient"
+            },
+            {
+              "competency_id": "http://kinexis.com/cbe/a8f82790-0245-0133-59fe-20c9d07c6451/competency/89",
+              "label": "mba6008-4",
+              "statement": "Analyze the microeconomic environment of corporate operations",
+              "achievement": "Proficient"
+            },
+            {
+              "competency_id": "http://kinexis.com/cbe/a8f82790-0245-0133-59fe-20c9d07c6451/competency/90",
+              "label": "mba6008-5",
+              "statement": "Communicate in a manner that is professional and consistent with expectations for members of the business professions.ply collaborative techniques to the virtual environment.",
+              "achievement": "NonProficient"
+            }
+          ]
+        },
+        {
+          "course_section_id": "http://kinexis.com/cbe/a8f82790-0245-0133-59fe-20c9d07c6451/course_section/50",
+          "label": "MBA-FP6012-1",
+          "title": "MBA-FP 6012 Section 1",
+          "competencies": [
+            {
+              "competency_id": "http://kinexis.com/cbe/a8f82790-0245-0133-59fe-20c9d07c6451/competency/91",
+              "label": "mba6012-1",
+              "statement": "Apply theories, models, and practices of marketing",
+              "achievement": "Basic"
+            },
+            {
+              "competency_id": "http://kinexis.com/cbe/a8f82790-0245-0133-59fe-20c9d07c6451/competency/92",
+              "label": "mba6012-2",
+              "statement": "Integrate fundamental principles and applications of marketing to address business problems.",
+              "achievement": "Basic"
+            },
+            {
+              "competency_id": "http://kinexis.com/cbe/a8f82790-0245-0133-59fe-20c9d07c6451/competency/93",
+              "label": "mba6012-3",
+              "statement": "Develop innovative and sustainable solutions to strategic marketing challenges",
+              "achievement": "Basic"
+            },
+            {
+              "competency_id": "http://kinexis.com/cbe/a8f82790-0245-0133-59fe-20c9d07c6451/competency/94",
+              "label": "mba6012-4",
+              "statement": "Integrate marketing analyses into general business management planning and decision making",
+              "achievement": "Basic"
+            },
+            {
+              "competency_id": "http://kinexis.com/cbe/a8f82790-0245-0133-59fe-20c9d07c6451/competency/95",
+              "label": "mba6012-5",
+              "statement": "Communicate in a manner that is professional and consistent with expectations for members of the business professions",
+              "achievement": "Basic"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

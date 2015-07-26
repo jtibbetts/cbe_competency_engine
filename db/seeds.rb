@@ -28,17 +28,17 @@ Cbe::Organization.create(
 )
 
 donat = Cbe::User.create(
-    lis_person_name_given: 'Roberta',
-    lis_person_name_family: 'Donat',
-    lis_person_name_full: 'Roberta Donat',
+    givenName: 'Roberta',
+    familyName: 'Donat',
+    name: 'Roberta Donat',
     email: 'rdonat@gmail.com',
     external_id: 'RD3321'
 )
 
 arne = Cbe::User.create(
-    lis_person_name_given: 'Tom',
-    lis_person_name_family: 'Arne',
-    lis_person_name_full: 'Tom Arne',
+    givenName: 'Tom',
+    familyName: 'Arne',
+    name: 'Tom Arne',
     email: 'tarne@hotmail.com',
     external_id: 'RD5421'
 )

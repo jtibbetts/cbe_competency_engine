@@ -1,0 +1,177 @@
+{
+  "@context": [
+    "http://purl.imsglobal.org/ctx/lti/v2/ToolConsumerProfile",
+    {
+      "ltitcp": "http://rails.kinexis.com:4000/lti2_tc/tool_consumer_profiles/8e34fac0-0881-0133-dfd7-20c9d07c6451#"
+    }
+  ],
+  "@type": "ToolConsumerProfile",
+  "@id": "http://rails.kinexis.com:4000/tool_consumer_profiles/8e34fac0-0881-0133-dfd7-20c9d07c6451",
+  "lti_version": "LTI-2p0",
+  "guid": "47cef000-0882-0133-dfd7-20c9d07c6451",
+  "product_instance": {
+    "guid": "dcddf9808107-81ea-eaa4-1edf-5d24568c",
+    "product_info": {
+      "product_name": {
+        "default_value": "Elan/LuMoS",
+        "key": "product.name"
+      },
+      "product_version": "3.1",
+      "description": {
+        "default_value": "Elan University/LuMoS Learning Platform",
+        "key": "product.version"
+      },
+      "technical_description": {
+        "default_value": "LTI 1, 1.1 and 2.0 compliant",
+        "key": "product.technicalDescription"
+      },
+      "product_family": {
+        "code": "LuMoS",
+        "vendor": {
+          "code": "lms.LuMoS.org",
+          "vendor_name": {
+            "default_value": "LuMoS Corporation",
+            "key": "product.vendor.name"
+          },
+          "description": {
+            "default_value": "LuMoS Corporation is a fictitious vendor of a Learning Management System",
+            "key": "product.vendor.description"
+          },
+          "website": "http://lms.LuMoS.org/products/omega",
+          "timestamp": "2012-07-09T012:08:16-04:00",
+          "contact": {
+            "email": "support@lms.LuMoS.org"
+          }
+        }
+      }
+    },
+    "support": {
+      "email": "john.tibbetts@kinexis.com"
+    },
+    "service_owner": {
+      "@id": "http://ec2.LuMoS.org/ServiceOwner",
+      "timestamp": "2012-03-28T09:08:16-04:00",
+      "service_owner_name": {
+        "default_value": "Elan University",
+        "key": "service_owner.name"
+      },
+      "description": {
+        "default_value": "Elan University EC2 Cloud",
+        "key": "service_owner.description"
+      },
+      "support": {
+        "email": "techsupport@elan.edu"
+      }
+    },
+    "service_provider": {
+      "@id": "http://ec2.LuMoS.org/ServiceProvider",
+      "guid": "ec2.LuMoS.org",
+      "timestamp": "2012-07-09T012:08:16-04:00",
+      "service_provider_name": {
+        "default_value": "Elan University",
+        "key": "service_provider.name"
+      },
+      "description": {
+        "default_value": "Elan University EC2 Cloud",
+        "key": "service_provider.description"
+      },
+      "support": {
+        "email": "support@yasp.LuMoS.org"
+      }
+    }
+  },
+  "capability_offered": [
+    "basic-lti-launch-request",
+    "Result.autocreate",
+    "Result.sourcedId",
+    "User.id",
+    "User.username",
+    "CourseSection.sourcedId",
+    "Person.sourcedId",
+    "Person.email.primary",
+    "Person.name.given",
+    "Person.name.family",
+    "Person.name.full",
+    "Membership.role",
+    "ToolProxy.custom.url",
+    "ToolProxyBinding.custom.url",
+    "LtiLink.custom.url",
+    "ToolConsumerProfile.url"
+  ],
+  "service_offered": [
+    {
+      "@type": "RestService",
+      "@id": "ltitcp:ToolProxy.collection",
+      "endpoint": "http://rails.kinexis.com:4000/lti2_tc/tools",
+      "format": [
+        "application/vnd.ims.lti.v2.toolproxy+json"
+      ],
+      "action": [
+        "POST"
+      ]
+    },
+    {
+      "@type": "RestService",
+      "@id": "ltitcp:ToolProxy.item",
+      "endpoint": "http://rails.kinexis.com:4000/lti2_tc/tools/{tool_proxy_guid}",
+      "format": [
+        "application/vnd.ims.lti.v2.toolproxy+json"
+      ],
+      "action": [
+        "GET",
+        "PUT"
+      ]
+    },
+    {
+      "@type": "RestService",
+      "@id": "ltitcp:Result.item",
+      "endpoint": "http://rails.kinexis.com:4000/lti2_tc/resources/Result/{sourcedId}",
+      "format": [
+        "application/vnd.ims.lis.v2.result+json"
+      ],
+      "action": [
+        "GET",
+        "PUT"
+      ]
+    },
+    {
+      "@type": "RestService",
+      "@id": "ltitcp:LtiLinkSettings",
+      "endpoint": "http://rails.kinexis.com:4000/lti2_tc/tool_settings/{tool_proxy_guid}/ltilink/{link_id}",
+      "format": [
+        "application/vnd.ims.lti.v2.toolsettings+json",
+        "application/vnd.ims.lti.v2.toolsettings.simple+json"
+      ],
+      "action": [
+        "GET",
+        "PUT"
+      ]
+    },
+    {
+      "@type": "RestService",
+      "@id": "ltitcp:ToolProxyBindingSettings",
+      "endpoint": "http://rails.kinexis.com:4000/lti2_tc/tool_settings/{tool_proxy_guid}/context/{context_id}",
+      "format": [
+        "application/vnd.ims.lti.v2.toolsettings+json",
+        "application/vnd.ims.lti.v2.toolsettings.simple+json"
+      ],
+      "action": [
+        "GET",
+        "PUT"
+      ]
+    },
+    {
+      "@type": "RestService",
+      "@id": "ltitcp:ToolProxySettings",
+      "endpoint": "http://rails.kinexis.com:4000/lti2_tc/tool_settings/{tool_proxy_guid}",
+      "format": [
+        "application/vnd.ims.lti.v2.toolsettings+json",
+        "application/vnd.ims.lti.v2.toolsettings.simple+json"
+      ],
+      "action": [
+        "GET",
+        "PUT"
+      ]
+    }
+  ]
+}

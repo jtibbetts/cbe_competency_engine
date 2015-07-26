@@ -25,59 +25,65 @@ module Cbe
 
   class RecordOfPerformance
 
-    def self.record_of_performance_media_type(base_uri, organization, user)
+    def self.record_of_performance_media_type(tcp_wrapper, base_uri, organization, user)
       uri_generator = UriGenerator.new(base_uri)
       result = ActiveSupport::OrderedHash.new
-      result['@context'] = ActiveSupport::OrderedHash.new
-      context_prefix = Rails.application.config.context_prefix
-      # TODO: Remove Not used
-      # icon_prefix = BusinessCenter::Application.config.icon_prefix
-      result['@context'] = ActiveSupport::OrderedHash.new
-      result['@context']['RecordOfPerformance'] = context_prefix + 'RecordOfPerformance'
+      context = {}
+      result['@context'] = context
+      context['@vocab'] = 'http://purl.kinexis.com:8888/ctx/cbe/v1/record_of_performance/'
+      context['schema'] = 'http://schema.org/'
       result['@id'] = uri_generator.root_uri
       result['@type'] = 'RecordOfPerformance'
+
       result['created_at'] = Time.now.iso8601
+
+      result['tool_consumer_profile'] = {
+        '@id' => tcp_wrapper.root['@id'],
+        'lti_version' => tcp_wrapper.first_at('lti_version'),
+        'product_name' => tcp_wrapper.first_at('product_instance.product_info.product_name.default_value'),
+        'service_provider_name' => tcp_wrapper.first_at('product_instance.service_provider.service_provider_name.default_value')
+      }
+
+      result['user'] = {
+          '@id' => uri_generator.compute_uri(['user', user.id]),
+          'schema:familyName' => user.familyName,
+          'schema:givenName' => user.givenName,
+          'email' => user.email,
+          'sourced_id' => user.external_id
+      }
+
+      result['organization'] = {
+          '@id' => uri_generator.compute_uri(['organization', organization.id]),
+          'legal_name' => organization.legal_name,
+          'schema:url' => organization.website
+      }
 
       program = derive_program(user)
 
-      content_hash = {
-          'organization' => {
-              'organization_id' => uri_generator.compute_uri(['organization', organization.id]),
-              'legal_name' => organization.legal_name,
-              'website' => organization.website
-          },
-          'user' => {
-              'user_id' => uri_generator.compute_uri(['user', user.id]),
-              'lis_person_name_family' => user.lis_person_name_family,
-              'lis_person_name_given' => user.lis_person_name_given,
-              'email' => user.email,
-              'sourced_id' => user.external_id
-          },
-          'program' => {
-              'program_id' => uri_generator.compute_uri(['program', program.id]),
-              'label' => program.label,
-              'degree_level' => program.degree_level,
-              'courses' => []
-          }
+      result['program'] = {
+          '@id' => uri_generator.compute_uri(['program', program.id]),
+          'schema:alternateName' => program.label,
+          'schema:name' => program.degree_level,
+          'courses' => []
       }
-      result['content'] = content_hash
+
 
       terms = derive_terms(user)
       terms.each do |term|
         course_sections = derive_course_sections(user, term)
         course_sections.each do |course_section|
           course_content_hash = {
-              'course_section_id' => uri_generator.compute_uri(['course_section', course_section.id]),
-              'label' => course_section.label,
+              '@id' => uri_generator.compute_uri(['course_section', course_section.id]),
+              'schema:alternateName' => course_section.label,
               'title' => course_section.title,
               'competencies' => []
           }
-          result['content']['program']['courses'] << course_content_hash
+          result['program']['courses'] << course_content_hash
 
           competencies = derive_competencies(course_section)
           competencies.each do |competency|
             competency_hash = {
-                'competency_id' => uri_generator.compute_uri(['competency', competency.id]),
+                '@id' => uri_generator.compute_uri(['competency', competency.id]),
                 'label' => competency.label,
                 'statement' => competency.statement,
                 'achievement' => derive_achievement(competency, course_section, user).label

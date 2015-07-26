@@ -18,8 +18,8 @@ Lumos::Application.routes.draw do
 
   post '/admin/register_new_tool', :to => 'admin/register_new_tool#index'
 
-  post '/push_record_of_performance_service', :to => 'push_record_of_performance#post_service'
+  post '/record_of_performance', :to => 'record_of_performance#post_service'
 
-  # devise_for :admin_users, ActiveAdmin::Devise.config
+  devise_for :admin_users, ActiveAdmin::Devise.config
 
 end

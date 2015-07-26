@@ -1,2 +1,2 @@
 
-Rails.application.config.context_prefix = 'http://purl.imsglobal.org/ctx/cbe/v1/record_of_performance#'
+Rails.application.config.context_prefix = 'http://purl.kinexis.com:8888/ctx/cbe/v1/cbe#'

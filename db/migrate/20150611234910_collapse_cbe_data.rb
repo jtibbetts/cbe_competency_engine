@@ -149,9 +149,9 @@ class CollapseCbeData < ActiveRecord::Migration
     end
 
     create_table "cbe_users", force: true do |t|
-      t.string  "lis_person_name_given",  default: "", null: false
-      t.string  "lis_person_name_family", default: "", null: false
-      t.string  "lis_person_name_full",   default: "", null: false
+      t.string  "givenName",  default: "", null: false
+      t.string  "familyName", default: "", null: false
+      t.string  "name",   default: "", null: false
       t.string  "email",                  default: "", null: false
       t.integer "external_id"
 

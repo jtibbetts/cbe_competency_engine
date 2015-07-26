@@ -18166,3 +18166,1638 @@ Processing by DocsController#show as HTML
   Parameters: {"filename"=>"/Users/johntibbetts/wirelog.html"}
   Rendered /Users/johntibbetts/wirelog.html (0.9ms)
 Completed 200 OK in 5ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+  [1m[36mLti2Tc::Registry Load (0.3ms)[0m  [1mSELECT `lti2_tc_registries`.* FROM `lti2_tc_registries`[0m
+Started GET "/admin" for 127.0.0.1 at 2015-07-08 14:46:43 -0700
+Processing by Admin::DashboardController#index as HTML
+Completed 500 Internal Server Error in 2ms
+  [1m[36mLti2Tc::Registry Load (0.3ms)[0m  [1mSELECT `lti2_tc_registries`.* FROM `lti2_tc_registries`[0m
+Started GET "/admin" for 127.0.0.1 at 2015-07-08 14:47:30 -0700
+Processing by Admin::DashboardController#index as HTML
+Completed 500 Internal Server Error in 2ms
+Started GET "/port" for 127.0.0.1 at 2015-07-08 14:47:42 -0700
+Started GET "/admin/" for 127.0.0.1 at 2015-07-08 14:47:49 -0700
+Processing by Admin::DashboardController#index as HTML
+Completed 500 Internal Server Error in 2ms
+  [1m[36mLti2Tc::Registry Load (0.4ms)[0m  [1mSELECT `lti2_tc_registries`.* FROM `lti2_tc_registries`[0m
+  [1m[36mLti2Tc::Registry Load (0.3ms)[0m  [1mSELECT `lti2_tc_registries`.* FROM `lti2_tc_registries`[0m
+  [1m[36mLti2Tc::Registry Load (0.5ms)[0m  [1mSELECT `lti2_tc_registries`.* FROM `lti2_tc_registries`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mSQL (27.8ms)[0m  [1mDELETE FROM `lti2_tc_deployment_requests`[0m
+  [1m[35mSQL (23.7ms)[0m  DELETE FROM `lti2_tc_tool_consumer_profiles`
+  [1m[36mSQL (3.6ms)[0m  [1mDELETE FROM `lti2_tc_resources`[0m
+  [1m[35mSQL (3.0ms)[0m  DELETE FROM `lti2_tc_tools`
+  [1m[36mSQL (1.7ms)[0m  [1mDELETE FROM `lti2_tc_links`[0m
+  [1m[35mSQL (2.8ms)[0m  DELETE FROM `grade_items`
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM `grade_results`[0m
+  [1m[35mSQL (7.8ms)[0m  DELETE FROM `lti2_tc_tool_settings`
+  [1m[36mSQL (18.3ms)[0m  [1mDELETE FROM `cbe_organizations`[0m
+  [1m[35mSQL (15.6ms)[0m  DELETE FROM `cbe_users`
+  [1m[36mSQL (10.2ms)[0m  [1mDELETE FROM `cbe_programs`[0m
+  [1m[35mSQL (9.5ms)[0m  DELETE FROM `cbe_terms`
+  [1m[36mSQL (7.5ms)[0m  [1mDELETE FROM `cbe_course_offerings`[0m
+  [1m[35mSQL (19.4ms)[0m  DELETE FROM `cbe_course_sections`
+  [1m[36mSQL (22.5ms)[0m  [1mDELETE FROM `cbe_competencies`[0m
+  [1m[35mSQL (15.1ms)[0m  DELETE FROM `cbe_competency_scores`
+  [1m[36mSQL (12.6ms)[0m  [1mDELETE FROM `cbe_course_section_members`[0m
+  [1m[35mSQL (10.1ms)[0m  DELETE FROM `cbe_achievement_levels`
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `cbe_organizations` (`created_at`, `description`, `label`, `legal_name`, `updated_at`, `website`) VALUES ('2015-07-09 15:59:52', 'IMS Institute for Educational Standards', 'IMSLearningInst', 'IMS Learning Institute, LLC', '2015-07-09 15:59:52', 'ili.imsglobal.org')
+  [1m[36m (6.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `cbe_users` (`created_at`, `email`, `external_id`, `familyName`, `givenName`, `name`, `updated_at`) VALUES ('2015-07-09 15:59:52', 'rdonat@gmail.com', 0, 'Donat', 'Roberta', 'Roberta Donat', '2015-07-09 15:59:52')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_users` (`created_at`, `email`, `external_id`, `familyName`, `givenName`, `name`, `updated_at`) VALUES ('2015-07-09 15:59:52', 'tarne@hotmail.com', 0, 'Arne', 'Tom', 'Tom Arne', '2015-07-09 15:59:52')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO `cbe_programs` (`created_at`, `degree_level`, `label`, `updated_at`, `version`) VALUES ('2015-07-09 15:59:52', 'MBA', 'Master of Business Admin FP', '2015-07-09 15:59:52', '31.1')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `cbe_terms` (`created_at`, `description`, `end_date`, `start_date`, `updated_at`) VALUES ('2015-07-09 15:59:52', 'Fall Quarter 2013', '2014-01-02', '2013-09-03', '2015-07-09 15:59:52')
+  [1m[36m (5.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_terms` (`created_at`, `description`, `end_date`, `start_date`, `updated_at`) VALUES ('2015-07-09 15:59:52', 'Winter Quarter 2014', '2014-05-22', '2014-01-15', '2015-07-09 15:59:52')[0m
+  [1m[35m (6.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `cbe_course_offerings` (`created_at`, `label`, `program_id`, `title`, `updated_at`, `version`) VALUES ('2015-07-09 15:59:52', 'MBA-FP 6004', 2, 'Foundational Skills for Business Leaders', '2015-07-09 15:59:52', '2A')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_course_offerings` (`created_at`, `label`, `program_id`, `title`, `updated_at`, `version`) VALUES ('2015-07-09 15:59:52', 'MBA-FP 6006', 2, 'Leading Innovation in the Global Enterprise', '2015-07-09 15:59:52', '2A')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_course_offerings` (`created_at`, `label`, `program_id`, `title`, `updated_at`, `version`) VALUES ('2015-07-09 15:59:52', 'MBA-FP 6008', 2, 'Global Economic Environment', '2015-07-09 15:59:52', '2A')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_course_offerings` (`created_at`, `label`, `program_id`, `title`, `updated_at`, `version`) VALUES ('2015-07-09 15:59:52', 'MBA-FP 6012', 2, 'Integrated Global Marketing', '2015-07-09 15:59:52', '2B')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_course_sections` (`course_offering_id`, `created_at`, `label`, `section_number`, `term_id`, `title`, `updated_at`) VALUES (5, '2015-07-09 15:59:53', 'MBA-FP6004-1', '1', 3, 'MBA-FP 6004 Section 1', '2015-07-09 15:59:53')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_course_sections` (`course_offering_id`, `created_at`, `label`, `section_number`, `term_id`, `title`, `updated_at`) VALUES (5, '2015-07-09 15:59:53', 'MBA-FP6004-2', '2', 3, 'MBA-FP 6004 Section 2', '2015-07-09 15:59:53')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `cbe_course_sections` (`course_offering_id`, `created_at`, `label`, `section_number`, `term_id`, `title`, `updated_at`) VALUES (6, '2015-07-09 15:59:53', 'MBA-FP6006-1', '1', 3, 'MBA-FP 6006 Section 1', '2015-07-09 15:59:53')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_course_sections` (`course_offering_id`, `created_at`, `label`, `section_number`, `term_id`, `title`, `updated_at`) VALUES (7, '2015-07-09 15:59:53', 'MBA-FP6008-1', '1', 3, 'MBA-FP 6008 Section 1', '2015-07-09 15:59:53')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_course_sections` (`course_offering_id`, `created_at`, `label`, `section_number`, `term_id`, `title`, `updated_at`) VALUES (8, '2015-07-09 15:59:53', 'MBA-FP6012-1', '1', 3, 'MBA-FP 6012 Section 1', '2015-07-09 15:59:53')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_course_sections` (`course_offering_id`, `created_at`, `label`, `section_number`, `term_id`, `title`, `updated_at`) VALUES (5, '2015-07-09 15:59:53', 'MBA-FP6004-1', '1', 4, 'MBA-FP 6004 Section 1', '2015-07-09 15:59:53')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_course_sections` (`course_offering_id`, `created_at`, `label`, `section_number`, `term_id`, `title`, `updated_at`) VALUES (5, '2015-07-09 15:59:53', 'MBA-FP6004-2', '2', 4, 'MBA-FP 6004 Section 2', '2015-07-09 15:59:53')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_course_sections` (`course_offering_id`, `created_at`, `label`, `section_number`, `term_id`, `title`, `updated_at`) VALUES (6, '2015-07-09 15:59:53', 'MBA-FP6006-1', '1', 4, 'MBA-FP 6006 Section 1', '2015-07-09 15:59:53')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `cbe_course_sections` (`course_offering_id`, `created_at`, `label`, `section_number`, `term_id`, `title`, `updated_at`) VALUES (7, '2015-07-09 15:59:53', 'MBA-FP6008-1', '1', 4, 'MBA-FP 6008 Section 1', '2015-07-09 15:59:53')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_course_sections` (`course_offering_id`, `created_at`, `label`, `section_number`, `term_id`, `title`, `updated_at`) VALUES (8, '2015-07-09 15:59:53', 'MBA-FP6012-1', '1', 4, 'MBA-FP 6012 Section 1', '2015-07-09 15:59:53')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (1.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `cbe_competencies` (`created_at`, `statement`, `updated_at`) VALUES ('2015-07-09 15:59:53', 'Examine the use of critical, strategic, and ethical thinking in decision-making', '2015-07-09 15:59:53')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.7ms)[0m  [1mINSERT INTO `cbe_competencies` (`created_at`, `label`, `statement`, `updated_at`) VALUES ('2015-07-09 15:59:53', 'mba6004-1', 'Integrate the Internet, collaboration, and virtual environment strategies into general business management planning and decision-making.', '2015-07-09 15:59:53')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO `cbe_competencies` (`created_at`, `label`, `statement`, `updated_at`) VALUES ('2015-07-09 15:59:53', 'mba6004-2', 'Integrate business strategies into general business management planning and decision-making.', '2015-07-09 15:59:53')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competencies` (`created_at`, `label`, `statement`, `updated_at`) VALUES ('2015-07-09 15:59:53', 'mba6004-3', 'Analyze relevant global business concerns for the future.', '2015-07-09 15:59:53')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competencies` (`created_at`, `label`, `statement`, `updated_at`) VALUES ('2015-07-09 15:59:53', 'mba6004-4', 'Communicate in a manner that is professional and consistent with expectations for members of the business professions.', '2015-07-09 15:59:53')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competencies` (`created_at`, `label`, `statement`, `updated_at`) VALUES ('2015-07-09 15:59:53', 'mba6006-1', 'Analyze contemporary leadership models and practices from the perspective of innovation in a global environment.', '2015-07-09 15:59:53')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `cbe_competencies` (`created_at`, `label`, `statement`, `updated_at`) VALUES ('2015-07-09 15:59:53', 'mba6006-2', 'Assess the behaviors that drive innovation and how leaders can use those behaviors to create innovative organizations.', '2015-07-09 15:59:53')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO `cbe_competencies` (`created_at`, `label`, `statement`, `updated_at`) VALUES ('2015-07-09 15:59:53', 'mba6006-3', 'Assess what leaders of innovation do to shape organizational culture and processes.', '2015-07-09 15:59:53')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competencies` (`created_at`, `label`, `statement`, `updated_at`) VALUES ('2015-07-09 15:59:53', 'mba6006-4', 'Communicate in a manner that is professional and consistent with expectations for members of the business professions.', '2015-07-09 15:59:53')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competencies` (`created_at`, `label`, `statement`, `updated_at`) VALUES ('2015-07-09 15:59:53', 'mba6008-1', 'Apply the theories, models, and practices of economic theory to create value for the firm.', '2015-07-09 15:59:53')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competencies` (`created_at`, `label`, `statement`, `updated_at`) VALUES ('2015-07-09 15:59:53', 'mba6008-2', 'Assess the impact of ethical and regulatory considerations on economic decisions', '2015-07-09 15:59:53')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competencies` (`created_at`, `label`, `statement`, `updated_at`) VALUES ('2015-07-09 15:59:53', 'mba6008-3', 'Analyze the macroeconomic environment of corporate operations', '2015-07-09 15:59:53')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competencies` (`created_at`, `label`, `statement`, `updated_at`) VALUES ('2015-07-09 15:59:53', 'mba6008-4', 'Analyze the microeconomic environment of corporate operations', '2015-07-09 15:59:53')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competencies` (`created_at`, `label`, `statement`, `updated_at`) VALUES ('2015-07-09 15:59:53', 'mba6008-5', 'Communicate in a manner that is professional and consistent with expectations for members of the business professions.ply collaborative techniques to the virtual environment.', '2015-07-09 15:59:53')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competencies` (`created_at`, `label`, `statement`, `updated_at`) VALUES ('2015-07-09 15:59:53', 'mba6012-1', 'Apply theories, models, and practices of marketing', '2015-07-09 15:59:53')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competencies` (`created_at`, `label`, `statement`, `updated_at`) VALUES ('2015-07-09 15:59:53', 'mba6012-2', 'Integrate fundamental principles and applications of marketing to address business problems.', '2015-07-09 15:59:53')[0m
+  [1m[35m (5.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (6.1ms)[0m  INSERT INTO `cbe_competencies` (`created_at`, `label`, `statement`, `updated_at`) VALUES ('2015-07-09 15:59:53', 'mba6012-3', 'Develop innovative and sustainable solutions to strategic marketing challenges', '2015-07-09 15:59:53')
+  [1m[36m (5.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (5.9ms)[0m  [1mINSERT INTO `cbe_competencies` (`created_at`, `label`, `statement`, `updated_at`) VALUES ('2015-07-09 15:59:53', 'mba6012-4', 'Integrate marketing analyses into general business management planning and decision making', '2015-07-09 15:59:53')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competencies` (`created_at`, `label`, `statement`, `updated_at`) VALUES ('2015-07-09 15:59:53', 'mba6012-5', 'Communicate in a manner that is professional and consistent with expectations for members of the business professions', '2015-07-09 15:59:53')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `cbe_competency_offering_map` (`competency_id`, `course_offering_id`, `created_at`, `sequence_number`, `updated_at`) VALUES (20, 5, '2015-07-09 15:59:53', 1, '2015-07-09 15:59:53')[0m
+  [1m[35m (5.4ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `cbe_competency_offering_map` (`competency_id`, `course_offering_id`, `created_at`, `sequence_number`, `updated_at`) VALUES (21, 5, '2015-07-09 15:59:53', 1, '2015-07-09 15:59:53')
+  [1m[36m (6.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (6.3ms)[0m  [1mINSERT INTO `cbe_competency_offering_map` (`competency_id`, `course_offering_id`, `created_at`, `sequence_number`, `updated_at`) VALUES (22, 5, '2015-07-09 15:59:53', 1, '2015-07-09 15:59:53')[0m
+  [1m[35m (5.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `cbe_competency_offering_map` (`competency_id`, `course_offering_id`, `created_at`, `sequence_number`, `updated_at`) VALUES (23, 5, '2015-07-09 15:59:53', 1, '2015-07-09 15:59:53')
+  [1m[36m (4.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO `cbe_competency_offering_map` (`competency_id`, `course_offering_id`, `created_at`, `sequence_number`, `updated_at`) VALUES (24, 5, '2015-07-09 15:59:53', 1, '2015-07-09 15:59:53')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `cbe_competency_offering_map` (`competency_id`, `course_offering_id`, `created_at`, `sequence_number`, `updated_at`) VALUES (25, 6, '2015-07-09 15:59:53', 1, '2015-07-09 15:59:53')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_offering_map` (`competency_id`, `course_offering_id`, `created_at`, `sequence_number`, `updated_at`) VALUES (26, 6, '2015-07-09 15:59:53', 1, '2015-07-09 15:59:53')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.4ms)[0m  INSERT INTO `cbe_competency_offering_map` (`competency_id`, `course_offering_id`, `created_at`, `sequence_number`, `updated_at`) VALUES (27, 6, '2015-07-09 15:59:53', 1, '2015-07-09 15:59:53')
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `cbe_competency_offering_map` (`competency_id`, `course_offering_id`, `created_at`, `sequence_number`, `updated_at`) VALUES (28, 6, '2015-07-09 15:59:53', 1, '2015-07-09 15:59:53')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_offering_map` (`competency_id`, `course_offering_id`, `created_at`, `sequence_number`, `updated_at`) VALUES (29, 7, '2015-07-09 15:59:53', 1, '2015-07-09 15:59:53')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_offering_map` (`competency_id`, `course_offering_id`, `created_at`, `sequence_number`, `updated_at`) VALUES (30, 7, '2015-07-09 15:59:53', 1, '2015-07-09 15:59:53')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_offering_map` (`competency_id`, `course_offering_id`, `created_at`, `sequence_number`, `updated_at`) VALUES (31, 7, '2015-07-09 15:59:53', 1, '2015-07-09 15:59:53')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_offering_map` (`competency_id`, `course_offering_id`, `created_at`, `sequence_number`, `updated_at`) VALUES (32, 7, '2015-07-09 15:59:53', 1, '2015-07-09 15:59:53')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_offering_map` (`competency_id`, `course_offering_id`, `created_at`, `sequence_number`, `updated_at`) VALUES (33, 7, '2015-07-09 15:59:53', 1, '2015-07-09 15:59:53')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_offering_map` (`competency_id`, `course_offering_id`, `created_at`, `sequence_number`, `updated_at`) VALUES (34, 8, '2015-07-09 15:59:53', 1, '2015-07-09 15:59:53')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_offering_map` (`competency_id`, `course_offering_id`, `created_at`, `sequence_number`, `updated_at`) VALUES (35, 8, '2015-07-09 15:59:53', 1, '2015-07-09 15:59:53')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_offering_map` (`competency_id`, `course_offering_id`, `created_at`, `sequence_number`, `updated_at`) VALUES (36, 8, '2015-07-09 15:59:53', 1, '2015-07-09 15:59:53')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_offering_map` (`competency_id`, `course_offering_id`, `created_at`, `sequence_number`, `updated_at`) VALUES (37, 8, '2015-07-09 15:59:53', 1, '2015-07-09 15:59:53')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_offering_map` (`competency_id`, `course_offering_id`, `created_at`, `sequence_number`, `updated_at`) VALUES (38, 8, '2015-07-09 15:59:53', 1, '2015-07-09 15:59:53')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mCbe::CourseSection Load (6.4ms)[0m  [1mSELECT `cbe_course_sections`.* FROM `cbe_course_sections`  WHERE `cbe_course_sections`.`term_id` = 3 AND `cbe_course_sections`.`section_number` = 1 AND (`cbe_course_sections`.`course_offering_id` BETWEEN 5 AND 7)[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_course_section_members` (`course_section_id`, `created_at`, `role`, `updated_at`, `user_id`) VALUES (11, '2015-07-09 15:59:53', 'learner', '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_course_section_members` (`course_section_id`, `created_at`, `role`, `updated_at`, `user_id`) VALUES (11, '2015-07-09 15:59:53', 'instructor', '2015-07-09 15:59:53', 3)
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_course_section_members` (`course_section_id`, `created_at`, `role`, `updated_at`, `user_id`) VALUES (13, '2015-07-09 15:59:53', 'learner', '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_course_section_members` (`course_section_id`, `created_at`, `role`, `updated_at`, `user_id`) VALUES (13, '2015-07-09 15:59:53', 'instructor', '2015-07-09 15:59:53', 3)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_course_section_members` (`course_section_id`, `created_at`, `role`, `updated_at`, `user_id`) VALUES (14, '2015-07-09 15:59:53', 'learner', '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_course_section_members` (`course_section_id`, `created_at`, `role`, `updated_at`, `user_id`) VALUES (14, '2015-07-09 15:59:53', 'instructor', '2015-07-09 15:59:53', 3)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mCbe::CourseSection Load (0.3ms)[0m  SELECT `cbe_course_sections`.* FROM `cbe_course_sections`  WHERE `cbe_course_sections`.`term_id` = 4 AND `cbe_course_sections`.`section_number` = 1 AND (`cbe_course_sections`.`course_offering_id` BETWEEN 7 AND 8)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_course_section_members` (`course_section_id`, `created_at`, `role`, `updated_at`, `user_id`) VALUES (19, '2015-07-09 15:59:53', 'learner', '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_course_section_members` (`course_section_id`, `created_at`, `role`, `updated_at`, `user_id`) VALUES (19, '2015-07-09 15:59:53', 'instructor', '2015-07-09 15:59:53', 3)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO `cbe_course_section_members` (`course_section_id`, `created_at`, `role`, `updated_at`, `user_id`) VALUES (20, '2015-07-09 15:59:53', 'learner', '2015-07-09 15:59:53', 4)
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `cbe_course_section_members` (`course_section_id`, `created_at`, `role`, `updated_at`, `user_id`) VALUES (20, '2015-07-09 15:59:53', 'instructor', '2015-07-09 15:59:53', 3)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mCbe::Competency Load (0.3ms)[0m  [1mSELECT `cbe_competencies`.* FROM `cbe_competencies`[0m
+  [1m[35mCbe::CourseSection Load (0.2ms)[0m  SELECT `cbe_course_sections`.* FROM `cbe_course_sections`
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (20, 11, '2015-07-09 15:59:53', 71.48093306479734, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (20, 12, '2015-07-09 15:59:53', 74.81667905817613, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (20, 13, '2015-07-09 15:59:53', 94.68203295180274, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (20, 14, '2015-07-09 15:59:53', 81.23910749423322, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (20, 15, '2015-07-09 15:59:53', 98.2460992765029, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (20, 16, '2015-07-09 15:59:53', 78.33883493570441, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (20, 17, '2015-07-09 15:59:53', 92.90980967031078, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (20, 18, '2015-07-09 15:59:53', 68.23727632231694, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (20, 19, '2015-07-09 15:59:53', 88.98023172673926, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.7ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (20, 20, '2015-07-09 15:59:53', 95.584404230844, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (21, 11, '2015-07-09 15:59:53', 73.20316834612457, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (21, 12, '2015-07-09 15:59:53', 89.24702154333997, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (21, 13, '2015-07-09 15:59:53', 91.86973641434321, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (21, 14, '2015-07-09 15:59:53', 72.9411875142963, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (21, 15, '2015-07-09 15:59:53', 71.64218616993418, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (21, 16, '2015-07-09 15:59:53', 99.41918460349058, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (21, 17, '2015-07-09 15:59:53', 84.78098775641669, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (21, 18, '2015-07-09 15:59:53', 98.36064854535525, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (21, 19, '2015-07-09 15:59:53', 74.39511577741052, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (21, 20, '2015-07-09 15:59:53', 91.73816675736944, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (22, 11, '2015-07-09 15:59:53', 78.36648042950621, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (22, 12, '2015-07-09 15:59:53', 88.03335239481984, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (22, 13, '2015-07-09 15:59:53', 72.16605413445191, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (22, 14, '2015-07-09 15:59:53', 82.21448380077001, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (22, 15, '2015-07-09 15:59:53', 97.58301886874614, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (22, 16, '2015-07-09 15:59:53', 69.04077569320557, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (22, 17, '2015-07-09 15:59:53', 81.70044009104308, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (22, 18, '2015-07-09 15:59:53', 72.14721640778185, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (22, 19, '2015-07-09 15:59:53', 68.12556886887782, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (22, 20, '2015-07-09 15:59:53', 97.84351188269193, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (23, 11, '2015-07-09 15:59:53', 69.10064923779807, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (23, 12, '2015-07-09 15:59:53', 74.73196023848845, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (23, 13, '2015-07-09 15:59:53', 84.57024369176945, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (23, 14, '2015-07-09 15:59:53', 86.96564009330615, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (23, 15, '2015-07-09 15:59:53', 63.45330442482635, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (23, 16, '2015-07-09 15:59:53', 89.38204886037596, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (23, 17, '2015-07-09 15:59:53', 78.67873707984367, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (23, 18, '2015-07-09 15:59:53', 97.50807359552905, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (23, 19, '2015-07-09 15:59:53', 76.3951607281859, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (23, 20, '2015-07-09 15:59:53', 67.82116522596807, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (24, 11, '2015-07-09 15:59:53', 87.43755255701939, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (24, 12, '2015-07-09 15:59:53', 60.474207130428475, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (24, 13, '2015-07-09 15:59:53', 67.88450413591983, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (24, 14, '2015-07-09 15:59:53', 62.67504488542699, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (24, 15, '2015-07-09 15:59:53', 88.04502006985021, '2015-07-09 15:59:53', 4)
+  [1m[36m (5.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (24, 16, '2015-07-09 15:59:53', 95.98079550192594, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (6.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (24, 17, '2015-07-09 15:59:53', 93.67144758487623, '2015-07-09 15:59:53', 4)
+  [1m[36m (6.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (24, 18, '2015-07-09 15:59:53', 68.19194127331667, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (4.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (24, 19, '2015-07-09 15:59:53', 80.9919745540866, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (24, 20, '2015-07-09 15:59:53', 70.04649692532129, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (25, 11, '2015-07-09 15:59:53', 60.60986144613531, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (25, 12, '2015-07-09 15:59:53', 76.69194626062112, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (25, 13, '2015-07-09 15:59:53', 91.57762590212953, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (25, 14, '2015-07-09 15:59:53', 80.80177417991791, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (25, 15, '2015-07-09 15:59:53', 70.32458826086537, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (25, 16, '2015-07-09 15:59:53', 87.60860492491054, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (25, 17, '2015-07-09 15:59:53', 98.3947308256964, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (25, 18, '2015-07-09 15:59:53', 68.85566891584969, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (25, 19, '2015-07-09 15:59:53', 74.68111261159771, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (25, 20, '2015-07-09 15:59:53', 68.57506309461924, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (26, 11, '2015-07-09 15:59:53', 71.83843803182039, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (26, 12, '2015-07-09 15:59:53', 76.9467457928656, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (26, 13, '2015-07-09 15:59:53', 73.41970209589438, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (26, 14, '2015-07-09 15:59:53', 84.76375179302302, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (26, 15, '2015-07-09 15:59:53', 89.61491083199401, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (26, 16, '2015-07-09 15:59:53', 77.04447211777662, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (26, 17, '2015-07-09 15:59:53', 71.28609691436081, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (26, 18, '2015-07-09 15:59:53', 68.36846096309618, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (26, 19, '2015-07-09 15:59:53', 92.84892385003769, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (26, 20, '2015-07-09 15:59:53', 93.04085084791248, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (27, 11, '2015-07-09 15:59:53', 99.03569456537076, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (27, 12, '2015-07-09 15:59:53', 88.55097718717968, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (27, 13, '2015-07-09 15:59:53', 63.21873604400429, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (27, 14, '2015-07-09 15:59:53', 80.41857289236313, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (27, 15, '2015-07-09 15:59:53', 71.71895750950034, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (27, 16, '2015-07-09 15:59:53', 77.81035542264806, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (27, 17, '2015-07-09 15:59:53', 72.98257602841998, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (27, 18, '2015-07-09 15:59:53', 68.03514753633648, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (27, 19, '2015-07-09 15:59:53', 81.7796947504587, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (27, 20, '2015-07-09 15:59:53', 90.42251873006064, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (28, 11, '2015-07-09 15:59:53', 74.34884527759644, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (28, 12, '2015-07-09 15:59:53', 60.392329365677824, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (28, 13, '2015-07-09 15:59:53', 68.46800489713446, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (28, 14, '2015-07-09 15:59:53', 74.61852676014084, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (28, 15, '2015-07-09 15:59:53', 85.45335636393384, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (28, 16, '2015-07-09 15:59:53', 87.28078145155543, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (28, 17, '2015-07-09 15:59:53', 79.7577272699131, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (28, 18, '2015-07-09 15:59:53', 90.98806879940275, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (28, 19, '2015-07-09 15:59:53', 79.04702602199846, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (28, 20, '2015-07-09 15:59:53', 96.57760027115418, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (29, 11, '2015-07-09 15:59:53', 88.65418903487358, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (29, 12, '2015-07-09 15:59:53', 64.50886332163482, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (29, 13, '2015-07-09 15:59:53', 85.3187961385622, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (29, 14, '2015-07-09 15:59:53', 69.79200011412827, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (29, 15, '2015-07-09 15:59:53', 60.687371931413395, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (29, 16, '2015-07-09 15:59:53', 68.66847454760104, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (29, 17, '2015-07-09 15:59:53', 82.67426621010605, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (29, 18, '2015-07-09 15:59:53', 68.36394139108845, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (29, 19, '2015-07-09 15:59:53', 67.1722387169294, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (29, 20, '2015-07-09 15:59:53', 76.88895487447881, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (30, 11, '2015-07-09 15:59:53', 76.90820514953761, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (30, 12, '2015-07-09 15:59:53', 81.88277582797532, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (30, 13, '2015-07-09 15:59:53', 80.56394870002657, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (30, 14, '2015-07-09 15:59:53', 67.21674835309311, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (30, 15, '2015-07-09 15:59:53', 89.19212453491286, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (30, 16, '2015-07-09 15:59:53', 71.948111262103, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (30, 17, '2015-07-09 15:59:53', 96.71076900663887, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (30, 18, '2015-07-09 15:59:53', 66.9415184988096, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (30, 19, '2015-07-09 15:59:53', 93.73049384677013, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (30, 20, '2015-07-09 15:59:53', 91.87224981475758, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (31, 11, '2015-07-09 15:59:53', 67.19639309475706, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (31, 12, '2015-07-09 15:59:53', 70.38862988141418, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (31, 13, '2015-07-09 15:59:53', 62.60175833081953, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (31, 14, '2015-07-09 15:59:53', 68.58122099344723, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (31, 15, '2015-07-09 15:59:53', 82.89209743634018, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (31, 16, '2015-07-09 15:59:53', 69.96229062373494, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (31, 17, '2015-07-09 15:59:53', 77.41703906641428, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (31, 18, '2015-07-09 15:59:53', 73.26067644381344, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (31, 19, '2015-07-09 15:59:53', 60.75806691446728, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (31, 20, '2015-07-09 15:59:53', 92.46155600778155, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (32, 11, '2015-07-09 15:59:53', 69.0281380077142, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (32, 12, '2015-07-09 15:59:53', 78.17613488895722, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (32, 13, '2015-07-09 15:59:53', 94.98547608897005, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (32, 14, '2015-07-09 15:59:53', 95.28142185100958, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (32, 15, '2015-07-09 15:59:53', 82.06340004378742, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (32, 16, '2015-07-09 15:59:53', 85.52137063811077, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (32, 17, '2015-07-09 15:59:53', 62.28904292906535, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (32, 18, '2015-07-09 15:59:53', 78.70266179803707, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (32, 19, '2015-07-09 15:59:53', 78.70168972506023, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (32, 20, '2015-07-09 15:59:53', 96.88910864198007, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (33, 11, '2015-07-09 15:59:53', 92.09721821163798, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (33, 12, '2015-07-09 15:59:53', 98.98441000684048, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (33, 13, '2015-07-09 15:59:53', 75.727788431356, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (33, 14, '2015-07-09 15:59:53', 60.65271964828735, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (33, 15, '2015-07-09 15:59:53', 77.78575523282223, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (33, 16, '2015-07-09 15:59:53', 68.3275998346341, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (33, 17, '2015-07-09 15:59:53', 77.91174472057669, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (33, 18, '2015-07-09 15:59:53', 75.86327309760209, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (33, 19, '2015-07-09 15:59:53', 71.69462792548757, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (33, 20, '2015-07-09 15:59:53', 83.86920179434892, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (34, 11, '2015-07-09 15:59:53', 93.75400365636827, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (34, 12, '2015-07-09 15:59:53', 82.2420698030497, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (34, 13, '2015-07-09 15:59:53', 98.08829418405548, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (34, 14, '2015-07-09 15:59:53', 97.12416345370102, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (34, 15, '2015-07-09 15:59:53', 62.91430180432737, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (34, 16, '2015-07-09 15:59:53', 71.46660704417879, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (34, 17, '2015-07-09 15:59:53', 84.4250865782695, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (34, 18, '2015-07-09 15:59:53', 63.049006529167215, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (34, 19, '2015-07-09 15:59:53', 80.04709976498258, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (34, 20, '2015-07-09 15:59:53', 69.70487584851118, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (35, 11, '2015-07-09 15:59:53', 90.20349917125017, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (35, 12, '2015-07-09 15:59:53', 61.92158109043246, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (35, 13, '2015-07-09 15:59:53', 63.04044921322549, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (35, 14, '2015-07-09 15:59:53', 69.37177184153126, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (35, 15, '2015-07-09 15:59:53', 95.13386259062716, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (35, 16, '2015-07-09 15:59:53', 88.16230380219196, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (35, 17, '2015-07-09 15:59:53', 88.88665009490681, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (35, 18, '2015-07-09 15:59:53', 61.65291853884935, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (35, 19, '2015-07-09 15:59:53', 91.8102254142547, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (35, 20, '2015-07-09 15:59:53', 72.15452542570429, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (36, 11, '2015-07-09 15:59:53', 97.55073739700975, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (36, 12, '2015-07-09 15:59:53', 86.44821497689776, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (36, 13, '2015-07-09 15:59:53', 73.5981925834359, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (36, 14, '2015-07-09 15:59:53', 66.41339163249857, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (36, 15, '2015-07-09 15:59:53', 76.00773738542436, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (36, 16, '2015-07-09 15:59:53', 95.00653757903035, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (36, 17, '2015-07-09 15:59:53', 84.97816095437055, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (36, 18, '2015-07-09 15:59:53', 92.85708042489597, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (36, 19, '2015-07-09 15:59:53', 61.15113274663346, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (36, 20, '2015-07-09 15:59:53', 90.70703883138077, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (37, 11, '2015-07-09 15:59:53', 75.29614976917908, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (37, 12, '2015-07-09 15:59:53', 68.5318412153992, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (37, 13, '2015-07-09 15:59:53', 84.5287392583765, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (37, 14, '2015-07-09 15:59:53', 60.61744501455504, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (37, 15, '2015-07-09 15:59:53', 97.3167170168128, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (37, 16, '2015-07-09 15:59:53', 97.6109328389049, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (37, 17, '2015-07-09 15:59:53', 82.09283004256903, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (37, 18, '2015-07-09 15:59:53', 92.34613761277828, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (37, 19, '2015-07-09 15:59:53', 60.67004533087409, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (37, 20, '2015-07-09 15:59:53', 70.6081933030883, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (38, 11, '2015-07-09 15:59:53', 88.33574103946468, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (38, 12, '2015-07-09 15:59:53', 74.52592081383385, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (38, 13, '2015-07-09 15:59:53', 96.22929614983516, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (38, 14, '2015-07-09 15:59:53', 89.48719659237719, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (38, 15, '2015-07-09 15:59:53', 61.51489757969464, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (38, 16, '2015-07-09 15:59:53', 96.93203020256183, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (38, 17, '2015-07-09 15:59:53', 74.83986283844507, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (38, 18, '2015-07-09 15:59:53', 97.17090844659316, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (38, 19, '2015-07-09 15:59:53', 61.78410902507068, '2015-07-09 15:59:53', 4)
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (38, 20, '2015-07-09 15:59:53', 93.25275030228265, '2015-07-09 15:59:53', 4)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_achievement_levels` (`created_at`, `label`, `start_of_range`, `updated_at`) VALUES ('2015-07-09 15:59:53', 'Distinguished', 90, '2015-07-09 15:59:53')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_achievement_levels` (`created_at`, `label`, `start_of_range`, `updated_at`) VALUES ('2015-07-09 15:59:53', 'Proficient', 80, '2015-07-09 15:59:53')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_achievement_levels` (`created_at`, `label`, `start_of_range`, `updated_at`) VALUES ('2015-07-09 15:59:53', 'Basic', 70, '2015-07-09 15:59:53')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `cbe_achievement_levels` (`created_at`, `label`, `start_of_range`, `updated_at`) VALUES ('2015-07-09 15:59:53', 'NonProficient', 0, '2015-07-09 15:59:53')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mLti2Tc::Registry Load (0.3ms)[0m  [1mSELECT `lti2_tc_registries`.* FROM `lti2_tc_registries`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mSQL (5.8ms)[0m  [1mDELETE FROM `lti2_tc_deployment_requests`[0m
+  [1m[35mSQL (9.6ms)[0m  DELETE FROM `lti2_tc_tool_consumer_profiles`
+  [1m[36mSQL (15.6ms)[0m  [1mDELETE FROM `lti2_tc_resources`[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM `lti2_tc_tools`
+  [1m[36mSQL (1.1ms)[0m  [1mDELETE FROM `lti2_tc_links`[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM `grade_items`
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM `grade_results`[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM `lti2_tc_tool_settings`
+  [1m[36mSQL (6.2ms)[0m  [1mDELETE FROM `cbe_organizations`[0m
+  [1m[35mSQL (5.9ms)[0m  DELETE FROM `cbe_users`
+  [1m[36mSQL (15.6ms)[0m  [1mDELETE FROM `cbe_programs`[0m
+  [1m[35mSQL (8.9ms)[0m  DELETE FROM `cbe_terms`
+  [1m[36mSQL (8.4ms)[0m  [1mDELETE FROM `cbe_course_offerings`[0m
+  [1m[35mSQL (6.5ms)[0m  DELETE FROM `cbe_course_sections`
+  [1m[36mSQL (15.5ms)[0m  [1mDELETE FROM `cbe_competencies`[0m
+  [1m[35mSQL (27.1ms)[0m  DELETE FROM `cbe_competency_scores`
+  [1m[36mSQL (11.4ms)[0m  [1mDELETE FROM `cbe_course_section_members`[0m
+  [1m[35mSQL (6.1ms)[0m  DELETE FROM `cbe_achievement_levels`
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `cbe_organizations` (`created_at`, `description`, `label`, `legal_name`, `updated_at`, `website`) VALUES ('2015-07-09 16:02:22', 'IMS Institute for Educational Standards', 'IMSLearningInst', 'IMS Learning Institute, LLC', '2015-07-09 16:02:22', 'ili.imsglobal.org')
+  [1m[36m (11.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `cbe_users` (`created_at`, `email`, `external_id`, `familyName`, `givenName`, `name`, `updated_at`) VALUES ('2015-07-09 16:02:22', 'rdonat@gmail.com', 0, 'Donat', 'Roberta', 'Roberta Donat', '2015-07-09 16:02:22')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `cbe_users` (`created_at`, `email`, `external_id`, `familyName`, `givenName`, `name`, `updated_at`) VALUES ('2015-07-09 16:02:22', 'tarne@hotmail.com', 0, 'Arne', 'Tom', 'Tom Arne', '2015-07-09 16:02:22')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `cbe_programs` (`created_at`, `degree_level`, `label`, `updated_at`, `version`) VALUES ('2015-07-09 16:02:22', 'MBA', 'Master of Business Admin FP', '2015-07-09 16:02:22', '31.1')[0m
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_terms` (`created_at`, `description`, `end_date`, `start_date`, `updated_at`) VALUES ('2015-07-09 16:02:22', 'Fall Quarter 2013', '2014-01-02', '2013-09-03', '2015-07-09 16:02:22')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_terms` (`created_at`, `description`, `end_date`, `start_date`, `updated_at`) VALUES ('2015-07-09 16:02:22', 'Winter Quarter 2014', '2014-05-22', '2014-01-15', '2015-07-09 16:02:22')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `cbe_course_offerings` (`created_at`, `label`, `program_id`, `title`, `updated_at`, `version`) VALUES ('2015-07-09 16:02:22', 'MBA-FP 6004', 3, 'Foundational Skills for Business Leaders', '2015-07-09 16:02:22', '2A')
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `cbe_course_offerings` (`created_at`, `label`, `program_id`, `title`, `updated_at`, `version`) VALUES ('2015-07-09 16:02:22', 'MBA-FP 6006', 3, 'Leading Innovation in the Global Enterprise', '2015-07-09 16:02:22', '2A')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_course_offerings` (`created_at`, `label`, `program_id`, `title`, `updated_at`, `version`) VALUES ('2015-07-09 16:02:22', 'MBA-FP 6008', 3, 'Global Economic Environment', '2015-07-09 16:02:22', '2A')
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_course_offerings` (`created_at`, `label`, `program_id`, `title`, `updated_at`, `version`) VALUES ('2015-07-09 16:02:22', 'MBA-FP 6012', 3, 'Integrated Global Marketing', '2015-07-09 16:02:22', '2B')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_course_sections` (`course_offering_id`, `created_at`, `label`, `section_number`, `term_id`, `title`, `updated_at`) VALUES (9, '2015-07-09 16:02:22', 'MBA-FP6004-1', '1', 5, 'MBA-FP 6004 Section 1', '2015-07-09 16:02:22')
+  [1m[36m (5.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_course_sections` (`course_offering_id`, `created_at`, `label`, `section_number`, `term_id`, `title`, `updated_at`) VALUES (9, '2015-07-09 16:02:22', 'MBA-FP6004-2', '2', 5, 'MBA-FP 6004 Section 2', '2015-07-09 16:02:22')[0m
+  [1m[35m (11.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (4.8ms)[0m  INSERT INTO `cbe_course_sections` (`course_offering_id`, `created_at`, `label`, `section_number`, `term_id`, `title`, `updated_at`) VALUES (10, '2015-07-09 16:02:22', 'MBA-FP6006-1', '1', 5, 'MBA-FP 6006 Section 1', '2015-07-09 16:02:22')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_course_sections` (`course_offering_id`, `created_at`, `label`, `section_number`, `term_id`, `title`, `updated_at`) VALUES (11, '2015-07-09 16:02:22', 'MBA-FP6008-1', '1', 5, 'MBA-FP 6008 Section 1', '2015-07-09 16:02:22')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_course_sections` (`course_offering_id`, `created_at`, `label`, `section_number`, `term_id`, `title`, `updated_at`) VALUES (12, '2015-07-09 16:02:22', 'MBA-FP6012-1', '1', 5, 'MBA-FP 6012 Section 1', '2015-07-09 16:02:22')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_course_sections` (`course_offering_id`, `created_at`, `label`, `section_number`, `term_id`, `title`, `updated_at`) VALUES (9, '2015-07-09 16:02:22', 'MBA-FP6004-1', '1', 6, 'MBA-FP 6004 Section 1', '2015-07-09 16:02:22')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_course_sections` (`course_offering_id`, `created_at`, `label`, `section_number`, `term_id`, `title`, `updated_at`) VALUES (9, '2015-07-09 16:02:22', 'MBA-FP6004-2', '2', 6, 'MBA-FP 6004 Section 2', '2015-07-09 16:02:22')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_course_sections` (`course_offering_id`, `created_at`, `label`, `section_number`, `term_id`, `title`, `updated_at`) VALUES (10, '2015-07-09 16:02:22', 'MBA-FP6006-1', '1', 6, 'MBA-FP 6006 Section 1', '2015-07-09 16:02:22')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_course_sections` (`course_offering_id`, `created_at`, `label`, `section_number`, `term_id`, `title`, `updated_at`) VALUES (11, '2015-07-09 16:02:22', 'MBA-FP6008-1', '1', 6, 'MBA-FP 6008 Section 1', '2015-07-09 16:02:22')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_course_sections` (`course_offering_id`, `created_at`, `label`, `section_number`, `term_id`, `title`, `updated_at`) VALUES (12, '2015-07-09 16:02:22', 'MBA-FP6012-1', '1', 6, 'MBA-FP 6012 Section 1', '2015-07-09 16:02:22')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `cbe_competencies` (`created_at`, `statement`, `updated_at`) VALUES ('2015-07-09 16:02:22', 'Examine the use of critical, strategic, and ethical thinking in decision-making', '2015-07-09 16:02:22')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competencies` (`created_at`, `label`, `statement`, `updated_at`) VALUES ('2015-07-09 16:02:22', 'mba6004-1', 'Integrate the Internet, collaboration, and virtual environment strategies into general business management planning and decision-making.', '2015-07-09 16:02:22')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `cbe_competencies` (`created_at`, `label`, `statement`, `updated_at`) VALUES ('2015-07-09 16:02:22', 'mba6004-2', 'Integrate business strategies into general business management planning and decision-making.', '2015-07-09 16:02:22')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competencies` (`created_at`, `label`, `statement`, `updated_at`) VALUES ('2015-07-09 16:02:22', 'mba6004-3', 'Analyze relevant global business concerns for the future.', '2015-07-09 16:02:22')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competencies` (`created_at`, `label`, `statement`, `updated_at`) VALUES ('2015-07-09 16:02:22', 'mba6004-4', 'Communicate in a manner that is professional and consistent with expectations for members of the business professions.', '2015-07-09 16:02:22')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `cbe_competencies` (`created_at`, `label`, `statement`, `updated_at`) VALUES ('2015-07-09 16:02:22', 'mba6006-1', 'Analyze contemporary leadership models and practices from the perspective of innovation in a global environment.', '2015-07-09 16:02:22')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `cbe_competencies` (`created_at`, `label`, `statement`, `updated_at`) VALUES ('2015-07-09 16:02:22', 'mba6006-2', 'Assess the behaviors that drive innovation and how leaders can use those behaviors to create innovative organizations.', '2015-07-09 16:02:22')
+  [1m[36m (5.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competencies` (`created_at`, `label`, `statement`, `updated_at`) VALUES ('2015-07-09 16:02:22', 'mba6006-3', 'Assess what leaders of innovation do to shape organizational culture and processes.', '2015-07-09 16:02:22')[0m
+  [1m[35m (5.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competencies` (`created_at`, `label`, `statement`, `updated_at`) VALUES ('2015-07-09 16:02:22', 'mba6006-4', 'Communicate in a manner that is professional and consistent with expectations for members of the business professions.', '2015-07-09 16:02:22')
+  [1m[36m (5.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competencies` (`created_at`, `label`, `statement`, `updated_at`) VALUES ('2015-07-09 16:02:22', 'mba6008-1', 'Apply the theories, models, and practices of economic theory to create value for the firm.', '2015-07-09 16:02:22')[0m
+  [1m[35m (5.1ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `cbe_competencies` (`created_at`, `label`, `statement`, `updated_at`) VALUES ('2015-07-09 16:02:22', 'mba6008-2', 'Assess the impact of ethical and regulatory considerations on economic decisions', '2015-07-09 16:02:22')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competencies` (`created_at`, `label`, `statement`, `updated_at`) VALUES ('2015-07-09 16:02:22', 'mba6008-3', 'Analyze the macroeconomic environment of corporate operations', '2015-07-09 16:02:22')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `cbe_competencies` (`created_at`, `label`, `statement`, `updated_at`) VALUES ('2015-07-09 16:02:22', 'mba6008-4', 'Analyze the microeconomic environment of corporate operations', '2015-07-09 16:02:22')
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `cbe_competencies` (`created_at`, `label`, `statement`, `updated_at`) VALUES ('2015-07-09 16:02:22', 'mba6008-5', 'Communicate in a manner that is professional and consistent with expectations for members of the business professions.ply collaborative techniques to the virtual environment.', '2015-07-09 16:02:22')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `cbe_competencies` (`created_at`, `label`, `statement`, `updated_at`) VALUES ('2015-07-09 16:02:22', 'mba6012-1', 'Apply theories, models, and practices of marketing', '2015-07-09 16:02:22')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `cbe_competencies` (`created_at`, `label`, `statement`, `updated_at`) VALUES ('2015-07-09 16:02:22', 'mba6012-2', 'Integrate fundamental principles and applications of marketing to address business problems.', '2015-07-09 16:02:22')[0m
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `cbe_competencies` (`created_at`, `label`, `statement`, `updated_at`) VALUES ('2015-07-09 16:02:22', 'mba6012-3', 'Develop innovative and sustainable solutions to strategic marketing challenges', '2015-07-09 16:02:22')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `cbe_competencies` (`created_at`, `label`, `statement`, `updated_at`) VALUES ('2015-07-09 16:02:22', 'mba6012-4', 'Integrate marketing analyses into general business management planning and decision making', '2015-07-09 16:02:22')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competencies` (`created_at`, `label`, `statement`, `updated_at`) VALUES ('2015-07-09 16:02:22', 'mba6012-5', 'Communicate in a manner that is professional and consistent with expectations for members of the business professions', '2015-07-09 16:02:22')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_offering_map` (`competency_id`, `course_offering_id`, `created_at`, `sequence_number`, `updated_at`) VALUES (39, 9, '2015-07-09 16:02:22', 1, '2015-07-09 16:02:22')[0m
+  [1m[35m (4.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_offering_map` (`competency_id`, `course_offering_id`, `created_at`, `sequence_number`, `updated_at`) VALUES (40, 9, '2015-07-09 16:02:22', 1, '2015-07-09 16:02:22')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `cbe_competency_offering_map` (`competency_id`, `course_offering_id`, `created_at`, `sequence_number`, `updated_at`) VALUES (41, 9, '2015-07-09 16:02:22', 1, '2015-07-09 16:02:22')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_offering_map` (`competency_id`, `course_offering_id`, `created_at`, `sequence_number`, `updated_at`) VALUES (42, 9, '2015-07-09 16:02:22', 1, '2015-07-09 16:02:22')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_offering_map` (`competency_id`, `course_offering_id`, `created_at`, `sequence_number`, `updated_at`) VALUES (43, 9, '2015-07-09 16:02:22', 1, '2015-07-09 16:02:22')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_offering_map` (`competency_id`, `course_offering_id`, `created_at`, `sequence_number`, `updated_at`) VALUES (44, 10, '2015-07-09 16:02:22', 1, '2015-07-09 16:02:22')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_offering_map` (`competency_id`, `course_offering_id`, `created_at`, `sequence_number`, `updated_at`) VALUES (45, 10, '2015-07-09 16:02:22', 1, '2015-07-09 16:02:22')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `cbe_competency_offering_map` (`competency_id`, `course_offering_id`, `created_at`, `sequence_number`, `updated_at`) VALUES (46, 10, '2015-07-09 16:02:22', 1, '2015-07-09 16:02:22')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_offering_map` (`competency_id`, `course_offering_id`, `created_at`, `sequence_number`, `updated_at`) VALUES (47, 10, '2015-07-09 16:02:22', 1, '2015-07-09 16:02:22')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_offering_map` (`competency_id`, `course_offering_id`, `created_at`, `sequence_number`, `updated_at`) VALUES (48, 11, '2015-07-09 16:02:22', 1, '2015-07-09 16:02:22')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_offering_map` (`competency_id`, `course_offering_id`, `created_at`, `sequence_number`, `updated_at`) VALUES (49, 11, '2015-07-09 16:02:22', 1, '2015-07-09 16:02:22')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `cbe_competency_offering_map` (`competency_id`, `course_offering_id`, `created_at`, `sequence_number`, `updated_at`) VALUES (50, 11, '2015-07-09 16:02:22', 1, '2015-07-09 16:02:22')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `cbe_competency_offering_map` (`competency_id`, `course_offering_id`, `created_at`, `sequence_number`, `updated_at`) VALUES (51, 11, '2015-07-09 16:02:22', 1, '2015-07-09 16:02:22')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `cbe_competency_offering_map` (`competency_id`, `course_offering_id`, `created_at`, `sequence_number`, `updated_at`) VALUES (52, 11, '2015-07-09 16:02:22', 1, '2015-07-09 16:02:22')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_offering_map` (`competency_id`, `course_offering_id`, `created_at`, `sequence_number`, `updated_at`) VALUES (53, 12, '2015-07-09 16:02:22', 1, '2015-07-09 16:02:22')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `cbe_competency_offering_map` (`competency_id`, `course_offering_id`, `created_at`, `sequence_number`, `updated_at`) VALUES (54, 12, '2015-07-09 16:02:22', 1, '2015-07-09 16:02:22')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_offering_map` (`competency_id`, `course_offering_id`, `created_at`, `sequence_number`, `updated_at`) VALUES (55, 12, '2015-07-09 16:02:22', 1, '2015-07-09 16:02:22')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_offering_map` (`competency_id`, `course_offering_id`, `created_at`, `sequence_number`, `updated_at`) VALUES (56, 12, '2015-07-09 16:02:22', 1, '2015-07-09 16:02:22')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `cbe_competency_offering_map` (`competency_id`, `course_offering_id`, `created_at`, `sequence_number`, `updated_at`) VALUES (57, 12, '2015-07-09 16:02:22', 1, '2015-07-09 16:02:22')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mCbe::CourseSection Load (0.4ms)[0m  [1mSELECT `cbe_course_sections`.* FROM `cbe_course_sections`  WHERE `cbe_course_sections`.`term_id` = 5 AND `cbe_course_sections`.`section_number` = 1 AND (`cbe_course_sections`.`course_offering_id` BETWEEN 9 AND 11)[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `cbe_course_section_members` (`course_section_id`, `created_at`, `role`, `updated_at`, `user_id`) VALUES (21, '2015-07-09 16:02:22', 'learner', '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_course_section_members` (`course_section_id`, `created_at`, `role`, `updated_at`, `user_id`) VALUES (21, '2015-07-09 16:02:22', 'instructor', '2015-07-09 16:02:22', 5)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_course_section_members` (`course_section_id`, `created_at`, `role`, `updated_at`, `user_id`) VALUES (23, '2015-07-09 16:02:22', 'learner', '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_course_section_members` (`course_section_id`, `created_at`, `role`, `updated_at`, `user_id`) VALUES (23, '2015-07-09 16:02:22', 'instructor', '2015-07-09 16:02:22', 5)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_course_section_members` (`course_section_id`, `created_at`, `role`, `updated_at`, `user_id`) VALUES (24, '2015-07-09 16:02:22', 'learner', '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_course_section_members` (`course_section_id`, `created_at`, `role`, `updated_at`, `user_id`) VALUES (24, '2015-07-09 16:02:22', 'instructor', '2015-07-09 16:02:22', 5)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mCbe::CourseSection Load (0.2ms)[0m  SELECT `cbe_course_sections`.* FROM `cbe_course_sections`  WHERE `cbe_course_sections`.`term_id` = 6 AND `cbe_course_sections`.`section_number` = 1 AND (`cbe_course_sections`.`course_offering_id` BETWEEN 11 AND 12)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_course_section_members` (`course_section_id`, `created_at`, `role`, `updated_at`, `user_id`) VALUES (29, '2015-07-09 16:02:22', 'learner', '2015-07-09 16:02:22', 6)
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_course_section_members` (`course_section_id`, `created_at`, `role`, `updated_at`, `user_id`) VALUES (29, '2015-07-09 16:02:22', 'instructor', '2015-07-09 16:02:22', 5)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_course_section_members` (`course_section_id`, `created_at`, `role`, `updated_at`, `user_id`) VALUES (30, '2015-07-09 16:02:22', 'learner', '2015-07-09 16:02:22', 6)
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `cbe_course_section_members` (`course_section_id`, `created_at`, `role`, `updated_at`, `user_id`) VALUES (30, '2015-07-09 16:02:22', 'instructor', '2015-07-09 16:02:22', 5)[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mCbe::Competency Load (0.3ms)[0m  [1mSELECT `cbe_competencies`.* FROM `cbe_competencies`[0m
+  [1m[35mCbe::CourseSection Load (0.3ms)[0m  SELECT `cbe_course_sections`.* FROM `cbe_course_sections`
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (39, 21, '2015-07-09 16:02:22', 74.6231238845302, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (39, 22, '2015-07-09 16:02:22', 70.6364400063946, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (39, 23, '2015-07-09 16:02:22', 65.11759954176486, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (39, 24, '2015-07-09 16:02:22', 93.04590005712554, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (39, 25, '2015-07-09 16:02:22', 80.39173662710488, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (39, 26, '2015-07-09 16:02:22', 83.0367356595038, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (39, 27, '2015-07-09 16:02:22', 63.947270869977835, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (39, 28, '2015-07-09 16:02:22', 95.54991069808165, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (39, 29, '2015-07-09 16:02:22', 68.98652168577414, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (39, 30, '2015-07-09 16:02:22', 78.73194153854905, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (40, 21, '2015-07-09 16:02:22', 62.5576023840022, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (40, 22, '2015-07-09 16:02:22', 99.62715051019521, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (40, 23, '2015-07-09 16:02:22', 91.62552567056213, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (40, 24, '2015-07-09 16:02:22', 85.8487394861595, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (40, 25, '2015-07-09 16:02:22', 82.21816688606685, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (40, 26, '2015-07-09 16:02:22', 84.33569204687748, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (40, 27, '2015-07-09 16:02:22', 81.42623288646405, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (40, 28, '2015-07-09 16:02:22', 84.87486603363982, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (40, 29, '2015-07-09 16:02:22', 97.02077498636581, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (40, 30, '2015-07-09 16:02:22', 91.31188529813663, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (41, 21, '2015-07-09 16:02:22', 96.24738094735714, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (41, 22, '2015-07-09 16:02:22', 69.93372828877224, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (41, 23, '2015-07-09 16:02:22', 65.2102208818644, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (41, 24, '2015-07-09 16:02:22', 98.84844546979348, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (41, 25, '2015-07-09 16:02:22', 65.2802906347801, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (41, 26, '2015-07-09 16:02:22', 77.87349855361643, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (41, 27, '2015-07-09 16:02:22', 91.67952854689963, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (41, 28, '2015-07-09 16:02:22', 93.91132715343693, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (41, 29, '2015-07-09 16:02:22', 61.22901939917484, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (41, 30, '2015-07-09 16:02:22', 83.15002773869733, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (42, 21, '2015-07-09 16:02:22', 92.52380539145744, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (42, 22, '2015-07-09 16:02:22', 77.05983379836192, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (42, 23, '2015-07-09 16:02:22', 91.36046127042852, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (42, 24, '2015-07-09 16:02:22', 70.87414528359167, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (42, 25, '2015-07-09 16:02:22', 87.47335307622524, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (42, 26, '2015-07-09 16:02:22', 92.05557229039186, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (42, 27, '2015-07-09 16:02:22', 70.3073281617951, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (42, 28, '2015-07-09 16:02:22', 62.91646993118477, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (42, 29, '2015-07-09 16:02:22', 74.1137792955688, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (42, 30, '2015-07-09 16:02:22', 97.102709358035, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (43, 21, '2015-07-09 16:02:22', 98.65944784987937, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (43, 22, '2015-07-09 16:02:22', 95.09226952513016, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (43, 23, '2015-07-09 16:02:22', 88.29026517072883, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (43, 24, '2015-07-09 16:02:22', 98.90598499276274, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (43, 25, '2015-07-09 16:02:22', 96.31492959114416, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (43, 26, '2015-07-09 16:02:22', 98.57815402652214, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (43, 27, '2015-07-09 16:02:22', 78.48683079866746, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (43, 28, '2015-07-09 16:02:22', 66.1363891858418, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (43, 29, '2015-07-09 16:02:22', 73.84603665975212, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (43, 30, '2015-07-09 16:02:22', 66.81340845246407, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (44, 21, '2015-07-09 16:02:22', 76.71276182987043, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (44, 22, '2015-07-09 16:02:22', 91.39302852603312, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (44, 23, '2015-07-09 16:02:22', 94.63771109942091, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (44, 24, '2015-07-09 16:02:22', 75.010822384904, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (44, 25, '2015-07-09 16:02:22', 83.81744419203167, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (44, 26, '2015-07-09 16:02:22', 80.7935159255727, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (44, 27, '2015-07-09 16:02:22', 86.21227351254356, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (44, 28, '2015-07-09 16:02:22', 71.06482698227236, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (44, 29, '2015-07-09 16:02:22', 88.55752826406645, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (44, 30, '2015-07-09 16:02:22', 72.56325497639347, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (45, 21, '2015-07-09 16:02:22', 95.786171077886, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (45, 22, '2015-07-09 16:02:22', 64.73218544611572, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (5.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (45, 23, '2015-07-09 16:02:22', 75.3263526890871, '2015-07-09 16:02:22', 6)
+  [1m[36m (5.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (45, 24, '2015-07-09 16:02:22', 99.20949234270122, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (5.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (45, 25, '2015-07-09 16:02:22', 85.61232886252742, '2015-07-09 16:02:22', 6)
+  [1m[36m (4.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (45, 26, '2015-07-09 16:02:22', 88.84344464626813, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (45, 27, '2015-07-09 16:02:22', 61.610614168268086, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (45, 28, '2015-07-09 16:02:22', 81.73737486233165, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (45, 29, '2015-07-09 16:02:22', 95.32214746626309, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (45, 30, '2015-07-09 16:02:22', 76.12561325351697, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (46, 21, '2015-07-09 16:02:22', 65.56178455174675, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (46, 22, '2015-07-09 16:02:22', 88.70773401895235, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (46, 23, '2015-07-09 16:02:22', 82.85291639921611, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (46, 24, '2015-07-09 16:02:22', 71.46018529603506, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (46, 25, '2015-07-09 16:02:22', 89.4335060968462, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (46, 26, '2015-07-09 16:02:22', 71.95369349613632, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (46, 27, '2015-07-09 16:02:22', 61.39684264382721, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (46, 28, '2015-07-09 16:02:22', 63.107304043887396, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (46, 29, '2015-07-09 16:02:22', 63.72677993167218, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (46, 30, '2015-07-09 16:02:22', 83.03679628255423, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (47, 21, '2015-07-09 16:02:22', 69.0100327977993, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (47, 22, '2015-07-09 16:02:22', 87.02640506307083, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (47, 23, '2015-07-09 16:02:22', 84.97761940696967, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (47, 24, '2015-07-09 16:02:22', 94.42029339057984, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (47, 25, '2015-07-09 16:02:22', 99.83480277925362, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (47, 26, '2015-07-09 16:02:22', 95.57174491828793, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (47, 27, '2015-07-09 16:02:22', 88.77199817732605, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (47, 28, '2015-07-09 16:02:22', 89.52965338120742, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (47, 29, '2015-07-09 16:02:22', 68.29437643837122, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (47, 30, '2015-07-09 16:02:22', 84.46246583179962, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (48, 21, '2015-07-09 16:02:22', 69.05140550856325, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (48, 22, '2015-07-09 16:02:22', 73.001121784439, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (48, 23, '2015-07-09 16:02:22', 99.13919817627497, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (48, 24, '2015-07-09 16:02:22', 72.78182704040312, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (48, 25, '2015-07-09 16:02:22', 63.519540940396965, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (48, 26, '2015-07-09 16:02:22', 85.09657232507197, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (1.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (48, 27, '2015-07-09 16:02:22', 87.37011163572018, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (48, 28, '2015-07-09 16:02:22', 61.98499982300068, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (48, 29, '2015-07-09 16:02:22', 73.01312253275375, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (48, 30, '2015-07-09 16:02:22', 92.78196252174071, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (49, 21, '2015-07-09 16:02:22', 77.35413843076995, '2015-07-09 16:02:22', 6)
+  [1m[36m (1.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.7ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (49, 22, '2015-07-09 16:02:22', 63.17901149540368, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (49, 23, '2015-07-09 16:02:22', 84.67952071883735, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (49, 24, '2015-07-09 16:02:22', 72.47119379845036, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (49, 25, '2015-07-09 16:02:22', 92.20914326345525, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (49, 26, '2015-07-09 16:02:22', 74.29982810646011, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (49, 27, '2015-07-09 16:02:22', 73.7151279014892, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (49, 28, '2015-07-09 16:02:22', 87.97844267607317, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (49, 29, '2015-07-09 16:02:22', 95.5122081849371, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (49, 30, '2015-07-09 16:02:22', 85.63593822162203, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (5.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (50, 21, '2015-07-09 16:02:22', 65.1293730400935, '2015-07-09 16:02:22', 6)
+  [1m[36m (5.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (50, 22, '2015-07-09 16:02:22', 66.74953775558323, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (5.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (50, 23, '2015-07-09 16:02:22', 77.85253563253585, '2015-07-09 16:02:22', 6)
+  [1m[36m (4.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (50, 24, '2015-07-09 16:02:22', 81.75867498802926, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (50, 25, '2015-07-09 16:02:22', 88.408741303926, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (50, 26, '2015-07-09 16:02:22', 83.12344125185749, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (50, 27, '2015-07-09 16:02:22', 65.58853420820185, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (50, 28, '2015-07-09 16:02:22', 82.46322422316261, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (50, 29, '2015-07-09 16:02:22', 82.24771536705332, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (50, 30, '2015-07-09 16:02:22', 79.07861153868006, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (51, 21, '2015-07-09 16:02:22', 60.86005011520231, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (51, 22, '2015-07-09 16:02:22', 74.60700991944682, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (51, 23, '2015-07-09 16:02:22', 83.40560481712541, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (51, 24, '2015-07-09 16:02:22', 77.52034656613478, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (51, 25, '2015-07-09 16:02:22', 67.60545104702796, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (51, 26, '2015-07-09 16:02:22', 81.54172009568168, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (51, 27, '2015-07-09 16:02:22', 98.08832281301589, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (51, 28, '2015-07-09 16:02:22', 83.0234506514545, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (51, 29, '2015-07-09 16:02:22', 99.46920231607052, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (51, 30, '2015-07-09 16:02:22', 74.02349949472932, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (1.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (52, 21, '2015-07-09 16:02:22', 85.58255962918861, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (52, 22, '2015-07-09 16:02:22', 70.40005131687141, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (52, 23, '2015-07-09 16:02:22', 87.67995488424859, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (52, 24, '2015-07-09 16:02:22', 73.06199515752212, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (52, 25, '2015-07-09 16:02:22', 95.87010013819452, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (52, 26, '2015-07-09 16:02:22', 87.44871391627682, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (52, 27, '2015-07-09 16:02:22', 60.09170833416101, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (52, 28, '2015-07-09 16:02:22', 74.58133534505406, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (52, 29, '2015-07-09 16:02:22', 96.15722667818284, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (52, 30, '2015-07-09 16:02:22', 90.5301806016953, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (53, 21, '2015-07-09 16:02:22', 95.05668154166156, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (53, 22, '2015-07-09 16:02:22', 95.71460314267532, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (53, 23, '2015-07-09 16:02:22', 71.8491093618037, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (53, 24, '2015-07-09 16:02:22', 99.43133380487562, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (53, 25, '2015-07-09 16:02:22', 79.5923849773013, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (53, 26, '2015-07-09 16:02:22', 89.94975256677542, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (53, 27, '2015-07-09 16:02:22', 66.31505139838636, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (53, 28, '2015-07-09 16:02:22', 64.13155451977852, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (53, 29, '2015-07-09 16:02:22', 69.5482253958946, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (53, 30, '2015-07-09 16:02:22', 90.22300827174794, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (54, 21, '2015-07-09 16:02:22', 72.39497444990084, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (54, 22, '2015-07-09 16:02:22', 96.93713681570814, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (54, 23, '2015-07-09 16:02:22', 91.05169324132666, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (54, 24, '2015-07-09 16:02:22', 97.13486046539873, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (54, 25, '2015-07-09 16:02:22', 95.97564602277865, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (54, 26, '2015-07-09 16:02:22', 88.43992829919722, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (54, 27, '2015-07-09 16:02:22', 77.71601834200027, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (54, 28, '2015-07-09 16:02:22', 89.00604068222803, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (54, 29, '2015-07-09 16:02:22', 81.52722288244904, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (54, 30, '2015-07-09 16:02:22', 77.87733690137034, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (55, 21, '2015-07-09 16:02:22', 99.80058409137774, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (55, 22, '2015-07-09 16:02:22', 69.97034947064931, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (55, 23, '2015-07-09 16:02:22', 97.13527727147573, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (55, 24, '2015-07-09 16:02:22', 98.71512543074735, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (55, 25, '2015-07-09 16:02:22', 89.43583593776, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (55, 26, '2015-07-09 16:02:22', 86.80834404066213, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (55, 27, '2015-07-09 16:02:22', 91.04634942752993, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (55, 28, '2015-07-09 16:02:22', 76.7862748050378, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (55, 29, '2015-07-09 16:02:22', 62.37791956202881, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (55, 30, '2015-07-09 16:02:22', 66.18912682714895, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (56, 21, '2015-07-09 16:02:22', 82.37449632471454, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (56, 22, '2015-07-09 16:02:22', 75.35590391566109, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (56, 23, '2015-07-09 16:02:22', 84.95274511513298, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (56, 24, '2015-07-09 16:02:22', 75.06831741565328, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (56, 25, '2015-07-09 16:02:22', 81.31963183439507, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (56, 26, '2015-07-09 16:02:22', 82.22676287768701, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (56, 27, '2015-07-09 16:02:22', 69.02948827036754, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (56, 28, '2015-07-09 16:02:22', 95.23082581717827, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (56, 29, '2015-07-09 16:02:22', 75.72608478338913, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (56, 30, '2015-07-09 16:02:22', 60.65285505225146, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (57, 21, '2015-07-09 16:02:22', 81.24630807894007, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (57, 22, '2015-07-09 16:02:22', 84.86857554360975, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (57, 23, '2015-07-09 16:02:22', 64.61367627853122, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (57, 24, '2015-07-09 16:02:22', 69.13041312839552, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (57, 25, '2015-07-09 16:02:22', 80.8455709432973, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (57, 26, '2015-07-09 16:02:22', 91.76227160757908, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (57, 27, '2015-07-09 16:02:22', 87.23651914403763, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (57, 28, '2015-07-09 16:02:22', 94.2731689378211, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (57, 29, '2015-07-09 16:02:22', 90.54229474551315, '2015-07-09 16:02:22', 6)
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_competency_scores` (`competency_id`, `course_section_id`, `created_at`, `final_score`, `updated_at`, `user_id`) VALUES (57, 30, '2015-07-09 16:02:22', 61.74991597899429, '2015-07-09 16:02:22', 6)[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `cbe_achievement_levels` (`created_at`, `label`, `start_of_range`, `updated_at`) VALUES ('2015-07-09 16:02:22', 'Distinguished', 90, '2015-07-09 16:02:22')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `cbe_achievement_levels` (`created_at`, `label`, `start_of_range`, `updated_at`) VALUES ('2015-07-09 16:02:22', 'Proficient', 80, '2015-07-09 16:02:22')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `cbe_achievement_levels` (`created_at`, `label`, `start_of_range`, `updated_at`) VALUES ('2015-07-09 16:02:22', 'Basic', 70, '2015-07-09 16:02:22')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `cbe_achievement_levels` (`created_at`, `label`, `start_of_range`, `updated_at`) VALUES ('2015-07-09 16:02:22', 'NonProficient', 0, '2015-07-09 16:02:22')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mLti2Tc::Registry Load (0.3ms)[0m  [1mSELECT `lti2_tc_registries`.* FROM `lti2_tc_registries`[0m

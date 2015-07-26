@@ -20,6 +20,31 @@
     </content>
     <orderEntry type="jdk" jdkName="rbenv: 2.1.4" jdkType="RUBY_SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="lti2 (v0.0.1, /Users/johntibbetts/git/LTI2-Reference) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../LTI2-Reference/db" />
+          <root url="file://$MODULE_DIR$/../LTI2-Reference/app" />
+          <root url="file://$MODULE_DIR$/../LTI2-Reference/bin" />
+          <root url="file://$MODULE_DIR$/../LTI2-Reference/lib" />
+          <root url="file://$MODULE_DIR$/../LTI2-Reference/.idea" />
+          <root url="file://$MODULE_DIR$/../LTI2-Reference/config" />
+          <root url="file://$MODULE_DIR$/../LTI2-Reference/lti2_tc" />
+          <root url="file://$MODULE_DIR$/../LTI2-Reference/lti2_tp" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../LTI2-Reference/db" />
+          <root url="file://$MODULE_DIR$/../LTI2-Reference/app" />
+          <root url="file://$MODULE_DIR$/../LTI2-Reference/bin" />
+          <root url="file://$MODULE_DIR$/../LTI2-Reference/lib" />
+          <root url="file://$MODULE_DIR$/../LTI2-Reference/.idea" />
+          <root url="file://$MODULE_DIR$/../LTI2-Reference/config" />
+          <root url="file://$MODULE_DIR$/../LTI2-Reference/lti2_tc" />
+          <root url="file://$MODULE_DIR$/../LTI2-Reference/lti2_tp" />
+        </SOURCES>
+      </library>
+    </orderEntry>
     <orderEntry type="library" scope="PROVIDED" name="PriorityQueue (v0.1.2, rbenv: 2.1.4) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="RedCloth (v4.2.9, rbenv: 2.1.4) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="actionmailer (v4.1.9, rbenv: 2.1.4) [gem]" level="application" />
@@ -68,7 +93,6 @@
     <orderEntry type="library" scope="PROVIDED" name="kaminari (v0.16.3, rbenv: 2.1.4) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="libv8 (v3.16.14.7, rbenv: 2.1.4) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="lrucache (v0.1.4, rbenv: 2.1.4) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="lti2 (v0.0.1@fdd332, rbenv: 2.1.4) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="macaddr (v1.7.1, rbenv: 2.1.4) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mail (v2.6.3, rbenv: 2.1.4) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="method_source (v0.8.2, rbenv: 2.1.4) [gem]" level="application" />
@@ -96,7 +120,7 @@
     <orderEntry type="library" scope="PROVIDED" name="railties (v4.1.9, rbenv: 2.1.4) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rake (v10.4.2, rbenv: 2.1.4) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ransack (v1.6.3, rbenv: 2.1.4) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rb-readline (v0.5.2, rbenv: 2.1.4) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rb-readline (v0.5.3, rbenv: 2.1.4) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ref (v1.0.5, rbenv: 2.1.4) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="responders (v1.1.2, rbenv: 2.1.4) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ruby_parser (v3.6.5, rbenv: 2.1.4) [gem]" level="application" />

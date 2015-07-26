@@ -22,17 +22,15 @@ GIT
   specs:
     yaml_db (0.2.3)
 
-GIT
-  remote: git@github.com:vitalsource/lti2-reference.git
-  revision: fdd332c852cd34332aa2b49c2b26a73b2846e9db
-  branch: LTI2.1-splitsecret
+PATH
+  remote: ../LTI2-Reference
   specs:
     lti2 (0.0.1)
       httparty
       jsonpath
       lrucache
       oauth (~> 0.4.7)
-      rails (~> 4.1.1)
+      rails
       rb-readline
       uuid
 
@@ -216,7 +214,7 @@ GEM
       activesupport (>= 3.0)
       i18n
       polyamorous (~> 1.1)
-    rb-readline (0.5.2)
+    rb-readline (0.5.3)
     ref (1.0.5)
     responders (1.1.2)
       railties (>= 3.2, < 4.2)

@@ -16,10 +16,11 @@ class RecordOfPerformanceController < ApplicationController
       base_uri = Rails.application.config.tool_consumer_registry.registry['tc_deployment_url']
       organization = Cbe::Organization.first
 
-      response = send_record_of_performance('http://kinexis.com/cbe', organization, cbe_user)
+      base_url = Rails.application.config.tool_consumer_registry.registry['tc_deployment_url']
+      response = send_record_of_performance(base_url, organization, cbe_user)
 
       if response.code.between?( 200, 202 )
-        render text: "Returned from eTranscript engine: #{response.body}"
+        render text: "Raw record of performance received by eTranscript engine: #{response.body}"
       else
         render text: "Error on RecordOfPerformance transmission: #{response.code}"
       end

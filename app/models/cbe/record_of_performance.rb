@@ -9,8 +9,8 @@ module Cbe
       @root_uri
     end
 
-    def compute_uri(path_array)
-      final_uri = @root_uri
+    def compute_uri(base_url, path_array)
+      final_uri = base_url
       while path_array.length > 0
         case path_array.length
           when 1
@@ -25,45 +25,44 @@ module Cbe
 
   class RecordOfPerformance
 
-    def self.record_of_performance_media_type(tcp_wrapper, base_uri, organization, user)
-      uri_generator = UriGenerator.new(base_uri)
+    def self.record_of_performance_media_type(tcp_wrapper, base_url, organization, user)
+      uri_generator = UriGenerator.new(base_url)
       result = ActiveSupport::OrderedHash.new
       context = {}
       result['@context'] = context
       context['@vocab'] = 'http://purl.kinexis.com:8888/ctx/cbe/v1/record_of_performance/'
-      context['schema'] = 'http://schema.org/'
       result['@id'] = uri_generator.root_uri
       result['@type'] = 'RecordOfPerformance'
 
       result['created_at'] = Time.now.iso8601
 
       result['tool_consumer_profile'] = {
-        '@id' => tcp_wrapper.root['@id'],
+        '@id' => "#{base_url}/lti2_tc/tool_consumer_profiles/#{tcp_wrapper.root['tc_profile_guid']}",
         'lti_version' => tcp_wrapper.first_at('lti_version'),
         'product_name' => tcp_wrapper.first_at('product_instance.product_info.product_name.default_value'),
         'service_provider_name' => tcp_wrapper.first_at('product_instance.service_provider.service_provider_name.default_value')
       }
 
       result['user'] = {
-          '@id' => uri_generator.compute_uri(['user', user.id]),
-          'schema:familyName' => user.familyName,
-          'schema:givenName' => user.givenName,
+          '@id' => uri_generator.compute_uri(base_url, ['users', user.id]),
+          'familyName' => user.familyName,
+          'givenName' => user.givenName,
           'email' => user.email,
           'sourced_id' => user.external_id
       }
 
       result['organization'] = {
-          '@id' => uri_generator.compute_uri(['organization', organization.id]),
+          '@id' => uri_generator.compute_uri(base_url, ['organizations', organization.id]),
           'legal_name' => organization.legal_name,
-          'schema:url' => organization.website
+          'website' => organization.website
       }
 
       program = derive_program(user)
 
       result['program'] = {
-          '@id' => uri_generator.compute_uri(['program', program.id]),
-          'schema:alternateName' => program.label,
-          'schema:name' => program.degree_level,
+          '@id' => uri_generator.compute_uri(base_url, ['programs', program.id]),
+          'label' => program.label,
+          'degree_level' => program.degree_level,
           'courses' => []
       }
 
@@ -73,8 +72,8 @@ module Cbe
         course_sections = derive_course_sections(user, term)
         course_sections.each do |course_section|
           course_content_hash = {
-              '@id' => uri_generator.compute_uri(['course_section', course_section.id]),
-              'schema:alternateName' => course_section.label,
+              '@id' => uri_generator.compute_uri(base_url, ['course_sections', course_section.id]),
+              'label' => course_section.label,
               'title' => course_section.title,
               'competencies' => []
           }
@@ -83,7 +82,7 @@ module Cbe
           competencies = derive_competencies(course_section)
           competencies.each do |competency|
             competency_hash = {
-                '@id' => uri_generator.compute_uri(['competency', competency.id]),
+                '@id' => uri_generator.compute_uri(base_url, ['competencies', competency.id]),
                 'label' => competency.label,
                 'statement' => competency.statement,
                 'achievement' => derive_achievement(competency, course_section, user).label

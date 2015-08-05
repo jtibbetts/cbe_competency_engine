@@ -7,7 +7,8 @@ tcp_wrapper = JsonWrapper.new(tcp.tc_profile)
 organization = Cbe::Organization.first
 user = Cbe::User.where(:name => 'Tom Arne').first
 
-rop_json = Cbe::RecordOfPerformance.record_of_performance_media_type(tcp_wrapper, 'http://kinexis.com/cbe', organization, user)
+base_url = Rails.application.config.tool_consumer_registry.registry['tc_deployment_url']
+rop_json = Cbe::RecordOfPerformance.record_of_performance_media_type(tcp_wrapper, base_url, organization, user)
 
 puts rop_json
 

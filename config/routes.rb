@@ -5,6 +5,12 @@ Lumos::Application.routes.draw do
   resources :registries
   resources :results
 
+  resources :users
+  resources :organizations
+  resources :programs
+  resources :course_sections
+  resources :competencies
+
   # cbe resources
   resources :organizations
 

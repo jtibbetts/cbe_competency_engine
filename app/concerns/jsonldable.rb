@@ -14,12 +14,11 @@ module Jsonldable
     response.headers['Access-Control-Allow-Origin'] = '*'
     response.headers['Link'] = hydra_link_header
     json_obj = obj.as_json
-    # context = "#{@purl_base_url}/ctx/cbe/v1/#{context_name}"
-    context = 'http://purl.kinexis.com:8888/ctx/cbe/v1/cbe'
+    context = "#{@purl_base_url}/contexts/cbe.jsonld"
     if json_obj.kind_of?(Array)
       result = {}
       result['@id'] = "#{@tc_deployment_url}#{path}"
-      # result['@context'] = context
+      result['@context'] = context
       result['@graph'] = []
       json_array = json_obj
       json_array.each do |json_obj|

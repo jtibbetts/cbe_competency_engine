@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150611234910) do
+ActiveRecord::Schema.define(version: 20150821213308) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -204,6 +204,8 @@ ActiveRecord::Schema.define(version: 20150611234910) do
     t.string   "familyName",  default: "", null: false
     t.string   "name",        default: "", null: false
     t.string   "email",       default: "", null: false
+    t.text     "pubkey"
+    t.text     "privkey"
     t.integer  "external_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -255,17 +257,17 @@ ActiveRecord::Schema.define(version: 20150611234910) do
   end
 
   create_table "lti2_tc_deployment_requests", force: true do |t|
-    t.string   "reg_key",              limit: 191, null: false
-    t.string   "reg_password",         limit: 191, null: false
-    t.text     "tc_oauth_half_secret"
-    t.string   "partner_url",          limit: 191
-    t.string   "status",               limit: 191
-    t.string   "disposition",          limit: 191
-    t.string   "confirm_url",          limit: 191
-    t.string   "tc_profile_guid",      limit: 191
+    t.string   "reg_key",         limit: 191, null: false
+    t.string   "reg_password",    limit: 191, null: false
+    t.text     "final_secret"
+    t.string   "partner_url",     limit: 191
+    t.string   "status",          limit: 191
+    t.string   "disposition",     limit: 191
+    t.string   "confirm_url",     limit: 191
+    t.string   "tc_profile_guid", limit: 191
     t.text     "tool_proxy_json"
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
   add_index "lti2_tc_deployment_requests", ["tc_profile_guid"], name: "index_deployment_requests_on_tc_profile_guid", unique: true, using: :btree

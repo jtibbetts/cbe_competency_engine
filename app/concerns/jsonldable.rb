@@ -40,6 +40,7 @@ module Jsonldable
     new_hash['@id'] = "#{@tc_deployment_url}#{path}"
     new_hash['@context'] = context
     new_hash = new_hash.merge(hash)
+    new_hash.delete('privkey')
     new_hash.delete('id')
     if id.present?
       new_hash['@id'] += "/#{id}"

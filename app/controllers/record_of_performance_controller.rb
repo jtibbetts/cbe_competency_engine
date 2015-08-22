@@ -1,4 +1,7 @@
 
+
+require 'json/ld/signature'
+
 class RecordOfPerformanceController < ApplicationController
 
   def post_service
@@ -45,6 +48,13 @@ class RecordOfPerformanceController < ApplicationController
 
     rop_json = Cbe::RecordOfPerformance.record_of_performance_media_type(tcp_wrapper, base_url, organization, user)
 
+    # Sign it
+    rop_wrapper = JsonWrapper.new(rop_json)
+
+    user_endpoint = rop_wrapper.root['user']['@id']
+
+    signed = JSON::LD::SIGNATURE::Sign.sign rop_json, { 'privateKeyPem' => user.privkey, 'creator' => "#{user_endpoint}" }
+
     # data = CGI::escape(data)
     signed_request = create_signed_request \
         endpoint,
@@ -52,7 +62,7 @@ class RecordOfPerformanceController < ApplicationController
         tool.key,
         tool.secret,
         {},
-        rop_json,
+        signed,
         mediatype
 
     puts "Register request: #{signed_request.signature_base_string}"

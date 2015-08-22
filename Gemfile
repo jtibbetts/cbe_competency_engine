@@ -9,6 +9,11 @@ gem 'sqlite3'
 
 gem 'lti2', path: '../LTI2-Reference'
 
+gem 'rdf'
+gem 'rdf-turtle'
+gem 'json-ld'
+gem 'rdf-jsonld-signature', path: '../ruby-jsonld-signatures'
+
 gem 'activeadmin', github: 'gregbell/active_admin'
 #Active admin dependencies
 gem 'ransack'

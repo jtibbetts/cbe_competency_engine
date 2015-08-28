@@ -6,6 +6,10 @@ class UsersController < ApplicationController
 
   def show
     user = Cbe::User.find(params[:id])
-    render json: to_jsonld(user, user_path, 'User')
+    if params.include?('pubkey')
+      render text: user.pubkey
+    else
+      render json: to_jsonld(user, user_path, 'User')
+    end
   end
 end

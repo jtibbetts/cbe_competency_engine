@@ -25,6 +25,6 @@ ADD ./ /apps/cbe_competency_engine
 
 WORKDIR /apps/cbe_competency_engine
 
-EXPOSE 9000
+EXPOSE 4000
 
 CMD ["/bin/bash", "/apps/cbe_competency_engine/docker/run.sh"]

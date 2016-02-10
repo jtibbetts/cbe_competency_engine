@@ -216,6 +216,7 @@ CREATE TABLE `lti2_tc_deployment_requests` (
   `disposition` varchar(255) DEFAULT NULL,
   `confirm_url` varchar(255) DEFAULT NULL,
   `tc_profile_guid` varchar(255) DEFAULT NULL,
+  `tool_proxy_guid` varchar(255) DEFAULT NULL,
   `tool_proxy_json` text,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,

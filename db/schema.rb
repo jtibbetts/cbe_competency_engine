@@ -189,7 +189,7 @@ ActiveRecord::Schema.define(version: 20150821213308) do
     t.datetime "updated_at"
   end
 
-  add_index "cbe_rubric", ["assessment_id"], name: "competency_id", using: :btree
+  add_index "cbe_rubric", ["assessment_id"], name: "competency_assessment", using: :btree
 
   create_table "cbe_terms", force: true do |t|
     t.date     "start_date",  null: false

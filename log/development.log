@@ -27114,3 +27114,11 @@ Processing by UsersController#show as HTML
   Parameters: {"id"=>"4"}
   [1m[35mCbe::User Load (0.6ms)[0m  SELECT  `cbe_users`.* FROM `cbe_users`  WHERE `cbe_users`.`id` = 4 LIMIT 1
 Completed 200 OK in 4827ms (Views: 1.0ms | ActiveRecord: 0.6ms)
+  [1m[36mLti2Tc::Registry Load (0.6ms)[0m  [1mSELECT `lti2_tc_registries`.* FROM `lti2_tc_registries`[0m
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+  [1m[36mLti2Tc::Registry Load (122.9ms)[0m  [1mSELECT `lti2_tc_registries`.* FROM `lti2_tc_registries`[0m
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)

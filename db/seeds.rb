@@ -29,6 +29,7 @@ Cbe::Organization.create(
 
 donat = Cbe::User.create(
     givenName: 'Roberta',
+    middleName: 'Marya',
     familyName: 'Donat',
     name: 'Roberta Donat',
     email: 'rdonat@gmail.com',
@@ -37,8 +38,9 @@ donat = Cbe::User.create(
 
 arne = Cbe::User.create(
     givenName: 'Tom',
+    middleName: 'Dennis',
     familyName: 'Arne',
-    name: 'Tom Arne',
+    name: 'Tom D Arne',
     email: 'tarne@hotmail.com',
     pubkey: %q(
 -----BEGIN PUBLIC KEY-----
@@ -90,6 +92,7 @@ mba6004 = Cbe::CourseOffering.create(
     program_id: mbaProg.id,
     label: 'MBA-FP 6004',
     title: 'Foundational Skills for Business Leaders',
+    description: 'Learner in the course acquires essential skills for business leadership',
     version: '2A'
 )
 
@@ -97,6 +100,7 @@ mba6006 = Cbe::CourseOffering.create(
     program_id: mbaProg.id,
     label: 'MBA-FP 6006',
     title: 'Leading Innovation in the Global Enterprise',
+    description: 'Engenders innovative approaches to Global business',
     version: '2A'
 )
 
@@ -104,6 +108,7 @@ mba6008 = Cbe::CourseOffering.create(
     program_id: mbaProg.id,
     label: 'MBA-FP 6008',
     title: 'Global Economic Environment',
+    description: 'Analyzes macroeconomics on the world stage',
     version: '2A'
 )
 
@@ -111,6 +116,7 @@ mba6012 = Cbe::CourseOffering.create(
     program_id: mbaProg.id,
     label: 'MBA-FP 6012',
     title: 'Integrated Global Marketing',
+    description: 'Familiarizes the students with winning international marketing techniques',
     version: '2B'
 )
 

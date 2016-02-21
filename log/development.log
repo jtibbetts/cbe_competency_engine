@@ -27122,3 +27122,127 @@ DEPRECATION WARNING: Active Admin: using `action_item` without a name is depreca
 DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
 DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
 DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+  [1m[36mLti2Tc::Registry Load (32.4ms)[0m  [1mSELECT `lti2_tc_registries`.* FROM `lti2_tc_registries`[0m
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+  [1m[36mLti2Tc::Registry Load (0.5ms)[0m  [1mSELECT `lti2_tc_registries`.* FROM `lti2_tc_registries`[0m
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+  [1m[35mActiveRecord::SchemaMigration Load (12.7ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+Migrating to AddPaulFieldsToRop (20160220234358)
+  [1m[36m (28.4ms)[0m  [1mALTER TABLE `course_sections` ADD `description` text AFTER `section_number`[0m
+Mysql2::Error: Table 'cbe_competency_engine.course_sections' doesn't exist: ALTER TABLE `course_sections` ADD `description` text AFTER `section_number`
+  [1m[36mLti2Tc::Registry Load (0.9ms)[0m  [1mSELECT `lti2_tc_registries`.* FROM `lti2_tc_registries`[0m
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+Migrating to AddPaulFieldsToRop (20160220234358)
+  [1m[36m (77.5ms)[0m  [1mALTER TABLE `cbe_course_sections` ADD `description` text AFTER `section_number`[0m
+  [1m[35m (31.0ms)[0m  CREATE TABLE `cbe_competency_outcomes` (`id` int(11) auto_increment PRIMARY KEY, `description` varchar(255)) ENGINE=InnoDB
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (12.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160220234358')
+  [1m[36m (6.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mLti2Tc::Registry Load (0.3ms)[0m  [1mSELECT `lti2_tc_registries`.* FROM `lti2_tc_registries`[0m
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddPaulFieldsToRop (20160220234358)
+  [1m[35m (26.6ms)[0m  DROP TABLE `cbe_competency_outcomes`
+  [1m[36m (40.2ms)[0m  [1mALTER TABLE `cbe_course_sections` DROP `description`[0m
+  [1m[35mSQL (24.8ms)[0m  DELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20160220234358'
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mLti2Tc::Registry Load (0.3ms)[0m  [1mSELECT `lti2_tc_registries`.* FROM `lti2_tc_registries`[0m
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+Migrating to AddPaulFieldsToRop (20160220234358)
+  [1m[36m (60.0ms)[0m  [1mALTER TABLE `cbe_users` ADD `middleName` varchar(255)[0m
+  [1m[35m (39.0ms)[0m  ALTER TABLE `cbe_course_sections` ADD `description` text AFTER `section_number`
+  [1m[36m (26.5ms)[0m  [1mCREATE TABLE `cbe_competency_outcomes` (`id` int(11) auto_increment PRIMARY KEY, `description` varchar(255)) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20160220234358')[0m
+  [1m[35m (6.5ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mLti2Tc::Registry Load (0.5ms)[0m  [1mSELECT `lti2_tc_registries`.* FROM `lti2_tc_registries`[0m
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddPaulFieldsToRop (20160220234358)
+  [1m[35m (24.0ms)[0m  DROP TABLE `cbe_competency_outcomes`
+  [1m[36m (20.5ms)[0m  [1mALTER TABLE `cbe_course_sections` DROP `description`[0m
+  [1m[35m (29.6ms)[0m  ALTER TABLE `cbe_users` DROP `middleName`
+  [1m[36mSQL (6.2ms)[0m  [1mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20160220234358'[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mLti2Tc::Registry Load (0.4ms)[0m  [1mSELECT `lti2_tc_registries`.* FROM `lti2_tc_registries`[0m
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+Migrating to AddPaulFieldsToRop (20160220234358)
+  [1m[36m (33.6ms)[0m  [1mALTER TABLE `cbe_users` ADD `middleName` varchar(255) AFTER `givenName`[0m
+  [1m[35m (59.9ms)[0m  ALTER TABLE `cbe_course_sections` ADD `description` text AFTER `section_number`
+  [1m[36m (24.9ms)[0m  [1mCREATE TABLE `cbe_competency_outcomes` (`id` int(11) auto_increment PRIMARY KEY, `description` varchar(255)) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20160220234358')[0m
+  [1m[35m (6.0ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mLti2Tc::Registry Load (0.4ms)[0m  [1mSELECT `lti2_tc_registries`.* FROM `lti2_tc_registries`[0m
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddPaulFieldsToRop (20160220234358)
+  [1m[35m (24.3ms)[0m  DROP TABLE `cbe_competency_outcomes`
+  [1m[36m (27.6ms)[0m  [1mALTER TABLE `cbe_course_sections` DROP `description`[0m
+  [1m[35m (33.0ms)[0m  ALTER TABLE `cbe_users` DROP `middleName`
+  [1m[36mSQL (5.8ms)[0m  [1mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20160220234358'[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mLti2Tc::Registry Load (0.5ms)[0m  [1mSELECT `lti2_tc_registries`.* FROM `lti2_tc_registries`[0m
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+Migrating to AddPaulFieldsToRop (20160220234358)
+  [1m[36m (36.8ms)[0m  [1mALTER TABLE `cbe_users` ADD `middleName` varchar(255) AFTER `givenName`[0m
+  [1m[35m (36.0ms)[0m  ALTER TABLE `cbe_course_offerings` ADD `description` text AFTER `title`
+  [1m[36m (26.0ms)[0m  [1mCREATE TABLE `cbe_competency_outcomes` (`id` int(11) auto_increment PRIMARY KEY, `description` varchar(255)) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20160220234358')[0m
+  [1m[35m (6.0ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mLti2Tc::Registry Load (0.5ms)[0m  [1mSELECT `lti2_tc_registries`.* FROM `lti2_tc_registries`[0m
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddPaulFieldsToRop (20160220234358)
+  [1m[35m (24.8ms)[0m  DROP TABLE `cbe_competency_outcomes`
+  [1m[36m (34.9ms)[0m  [1mALTER TABLE `cbe_course_offerings` DROP `description`[0m
+  [1m[35m (35.8ms)[0m  ALTER TABLE `cbe_users` DROP `middleName`
+  [1m[36mSQL (6.2ms)[0m  [1mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20160220234358'[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mLti2Tc::Registry Load (0.4ms)[0m  [1mSELECT `lti2_tc_registries`.* FROM `lti2_tc_registries`[0m
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+DEPRECATION WARNING: Active Admin: using `action_item` without a name is deprecated! Use `action_item(:edit)`. (called from action_item at /Users/johntibbetts/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/bundler/gems/active_admin-e3a7354c0196/lib/active_admin/dsl.rb:92)
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+Migrating to AddPaulFieldsToRop (20160220234358)
+  [1m[36m (38.0ms)[0m  [1mALTER TABLE `cbe_users` ADD `middleName` varchar(255) AFTER `givenName`[0m
+  [1m[35m (30.3ms)[0m  ALTER TABLE `cbe_course_offerings` ADD `description` text AFTER `title`
+  [1m[36m (24.4ms)[0m  [1mCREATE TABLE `cbe_competency_outcomes` (`id` int(11) auto_increment PRIMARY KEY, `description` varchar(255)) ENGINE=InnoDB[0m
+  [1m[35m (12.6ms)[0m  CREATE TABLE `cbe_competency_evidences` (`id` int(11) auto_increment PRIMARY KEY, `description` varchar(255)) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160220234358')
+  [1m[36m (6.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`

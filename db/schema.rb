@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150821213308) do
+ActiveRecord::Schema.define(version: 20160220234358) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -83,6 +83,10 @@ ActiveRecord::Schema.define(version: 20150821213308) do
 
   add_index "cbe_competencies", ["parent_competency_id"], name: "parent_competency_id", using: :btree
 
+  create_table "cbe_competency_evidences", force: true do |t|
+    t.string "description"
+  end
+
   create_table "cbe_competency_offering_map", force: true do |t|
     t.integer  "course_offering_id", null: false
     t.integer  "competency_id",      null: false
@@ -92,6 +96,10 @@ ActiveRecord::Schema.define(version: 20150821213308) do
   end
 
   add_index "cbe_competency_offering_map", ["course_offering_id", "competency_id"], name: "competency_offering_id", unique: true, using: :btree
+
+  create_table "cbe_competency_outcomes", force: true do |t|
+    t.string "description"
+  end
 
   create_table "cbe_competency_scores", force: true do |t|
     t.integer  "competency_id",                  null: false
@@ -111,9 +119,10 @@ ActiveRecord::Schema.define(version: 20150821213308) do
   add_index "cbe_competency_scores", ["competency_id", "user_id", "course_section_id"], name: "competency_id", unique: true, using: :btree
 
   create_table "cbe_course_offerings", force: true do |t|
-    t.integer  "program_id",              null: false
-    t.string   "label",      default: "", null: false
+    t.integer  "program_id",               null: false
+    t.string   "label",       default: "", null: false
     t.string   "title"
+    t.text     "description"
     t.string   "version"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -189,7 +198,7 @@ ActiveRecord::Schema.define(version: 20150821213308) do
     t.datetime "updated_at"
   end
 
-  add_index "cbe_rubric", ["assessment_id"], name: "competency_assessment", using: :btree
+  add_index "cbe_rubric", ["assessment_id"], name: "competency_id", using: :btree
 
   create_table "cbe_terms", force: true do |t|
     t.date     "start_date",  null: false
@@ -201,6 +210,7 @@ ActiveRecord::Schema.define(version: 20150821213308) do
 
   create_table "cbe_users", force: true do |t|
     t.string   "givenName",   default: "", null: false
+    t.string   "middleName"
     t.string   "familyName",  default: "", null: false
     t.string   "name",        default: "", null: false
     t.string   "email",       default: "", null: false

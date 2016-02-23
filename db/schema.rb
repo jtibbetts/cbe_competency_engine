@@ -72,6 +72,7 @@ ActiveRecord::Schema.define(version: 20160220234358) do
     t.string   "statement"
     t.string   "label",                     default: "", null: false
     t.string   "title",                     default: "", null: false
+    t.datetime "date_completed"
     t.string   "reference_hierarchy_level"
     t.string   "aggregate",                 default: ""
     t.string   "display"
@@ -168,6 +169,16 @@ ActiveRecord::Schema.define(version: 20160220234358) do
     t.text     "feedback"
     t.datetime "timestamp"
     t.integer  "faculty_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "cbe_ctitleourse_offerings", force: true do |t|
+    t.integer  "program_id",               null: false
+    t.string   "label",       default: "", null: false
+    t.string   "title"
+    t.text     "description"
+    t.string   "version"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

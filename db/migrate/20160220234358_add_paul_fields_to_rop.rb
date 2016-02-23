@@ -4,6 +4,8 @@ class AddPaulFieldsToRop < ActiveRecord::Migration
 
     add_column :cbe_course_offerings, :description, :text, after: :title
 
+    add_column :cbe_competencies, :date_completed, :timestamp, after: :title
+
     create_table :cbe_competency_outcomes do |t|
       t.string :description
     end

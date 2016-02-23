@@ -12,7 +12,7 @@ rop_json = Cbe::RecordOfPerformance.record_of_performance_media_type(tcp_wrapper
 
 puts rop_json
 
-File.open("data/rop_media_type.jsonld", "w") { |file| file.write rop_json }
+# File.open("data/rop_media_type.jsonld", "w") { |file| file.write rop_json }
 
 # put one in purl repo
-File.open("/Users/johntibbetts/git/purl_redirector/data/purl.imsglobal.org/ctx/cbe/v1/record_of_performance/sample/record_of_performance.jsonld", "w") { |file| file.write rop_json }
+# File.open("/Users/johntibbetts/git/purl_redirector/data/purl.imsglobal.org/ctx/cbe/v1/record_of_performance/sample/record_of_performance.jsonld", "w") { |file| file.write rop_json }
